@@ -27,3 +27,7 @@ h1 {
     font-size: medium;
 
 }
+
+.safari-alphabets:hover {
+    cursor: pointer;
+}
