@@ -19,15 +19,24 @@ h1 {
     font-size: 2.5rem;
 }
 
-.safari-alphabets {
-    position: relative;
-    letter-spacing: 2rem;
-    text-align: center;
-    background: beige;
-    font-size: medium;
-
+.safari-keyboard {
+    display: table;
+    width: 500px;
+    height: 250px;
+    
 }
 
+.keyboardRow {
+    display: table-row;
+    border: 1px solid chocolate;
+    text-align: center;
+}
+
+.punchKey {
+    display: table-cell;
+    border: 1px solid black;
+    text-align: center;
+}
 .safari-alphabets:hover {
     cursor: pointer;
 }
