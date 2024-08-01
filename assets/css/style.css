@@ -45,13 +45,14 @@ h1 {
 }
 
 .keyboardRow {
-    display: table-row;
-    border: 1px solid chocolate;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 }
 
 .punchKey {
-    display: table-cell;
+    display: flex;
     border: 1px solid black;
     text-align: center;
 }
