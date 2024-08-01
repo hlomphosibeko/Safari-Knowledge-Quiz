@@ -10,8 +10,8 @@
     font-family: "Indie Flower", cursive;
     font-weight: 400;
     font-style: normal;
-  }
-  
+}
+
 
 body {
     text-align: center;
@@ -22,6 +22,7 @@ body {
 header a {
     text-decoration: none;
 }
+
 h1 {
     color: #d2691e;
     font-size: 2.5rem;
@@ -31,34 +32,45 @@ h1 {
     color: #d2691e;
 }
 
- /* Main content*/
+/* Main content*/
 .hidden-question {
     display: none;
 }
 
 .safari-keyboard {
-    display: table;
-    width: 500px;
-    height: 250px;
-    margin: 0 100px;
-    
+    display: flex;
+    height: 100vh;
 }
 
 .keyboardRow {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .punchKey {
     display: flex;
-    border: 1px solid black;
+    box-shadow: 0 -6px 10px rgb(255, 255, 255, 1), 0 4px 15px rgb(0, 0, 0, 0, 0.15);
+    transition: 0.5s;
+    height: 2.5em;
+    font-size: 1em;
+    width: 3em;
+    margin: 0.3em;
+    background-color: #f2f2f2;
+    border-radius: 0.5em;
+    line-height: 2.5em;
+    letter-spacing: 1px;
     text-align: center;
+
 }
-.safari-alphabets:hover {
+
+.punchKey:hover {
     cursor: pointer;
+    box-shadow: 0 2px 0 rgb(0, 0, 0, 0, 0.15);
+    top: 3px;
 }
+
 .safari-quizAnimals {
     /*display: none;*/
     position: absolute;
