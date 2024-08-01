@@ -1,3 +1,10 @@
+/* Asterisk selector set to override browser style*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /* Font Family */
 .indie-flower-regular {
     font-family: "Indie Flower", cursive;
@@ -19,6 +26,11 @@ h1 {
     color: #d2691e;
     font-size: 2.5rem;
 }
+
+#get-started {
+    color: #d2691e;
+}
+
  /* Main content*/
 .hidden-question {
     display: none;
@@ -28,7 +40,8 @@ h1 {
     display: table;
     width: 500px;
     height: 250px;
-    position: relative;
+    margin: 0 100px;
+    
 }
 
 .keyboardRow {
@@ -44,4 +57,8 @@ h1 {
 }
 .safari-alphabets:hover {
     cursor: pointer;
+}
+.safari-quizAnimals {
+    /*display: none;*/
+    position: absolute;
 }
