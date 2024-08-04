@@ -75,3 +75,7 @@ h1 {
     /*display: none;*/
     position: absolute;
 }
+
+.textarea {
+    border-inline: 1px ;
+}
