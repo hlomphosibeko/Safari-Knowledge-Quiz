@@ -32,7 +32,13 @@ h1 {
     color: #d2691e;
 }
 
-/* Main content*/
+/* Main content*/ 
+.safari-back {
+    background-image: url('../images/safari-bild.jpg');
+    margin: 0 200px;
+   
+ 
+}
 .hidden-question {
     display: none;
 }
