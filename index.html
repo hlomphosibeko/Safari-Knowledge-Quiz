@@ -24,6 +24,11 @@
         </a>
     </header>
     <main class="safari-back">
+        <div class="safari-answerLine">
+            <p>Enter Answer:</p>
+            <input type="text" id="answer-area">
+        </div>
+        <button>Submit Answer</button>
         <div class="safari-questions">
             <!--
             <p class="hidden-question">What is the name of this animal?</p>
@@ -52,13 +57,9 @@
             
             
         </div>
-        <div class="safari-answerLine">
-            <p>Enter Answer:</p>
-            <input type="text" id="answer-area">
-        </div>
-        <button>Submit Answer</button>
+        
         <div class="safari-keyboard">
-            <div class="keyboardRow">
+            <!--<div class="keyboardRow">
                 <span class="punchKey">Q</span>
                 <span class="punchKey">W</span>
                 <span class="punchKey">E</span>
@@ -89,12 +90,12 @@
                 <span class="punchKey">B</span>
                 <span class="punchKey">N</span>
                 <span class="punchKey">M</span>
-            </div>
+            </div>-->
         </div>
     </main>
-    <div class="safari-scores">
-        <p>Correct Answer <span>0</span></p>
-        <p>Incorrect Answer <span>0</span></p>
+    <div class="safari-points">
+        <p class="points"><strong>Correct Answer: </strong><span class="correctPoints">0</span></p>
+        <p class="points"><strong>Incorrect Answer: </strong><span class="incorrectPoints">0</span></p>
     </div>
     
 <body>
