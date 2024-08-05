@@ -54,16 +54,27 @@ h1 {
 .hidden-question {
     display: none;
 }
-.safari-answerLine p {
-    display: none;
-    font-size: 1em;
+.my-questions {
+    position: absolute;
+    bottom: 420px;
+    left: 80px;
 }
-.safari-answers {
+.my-cheetah {
+    position: absolute;
+    bottom: 53%;
+    background-color: chocolate;
+    left: 150px;
+    padding: 3%;
+    border-radius: 30%;
+}
+.safari-answerLine {
+    font-size: 1em;
     position: absolute;
     left: 100px;
-    bottom: 258px;
-    
+    bottom: 320px;
+    border-radius: 10px;
 }
+
 button {
     position: absolute;
     bottom: 280px;
