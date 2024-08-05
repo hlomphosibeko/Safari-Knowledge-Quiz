@@ -55,6 +55,20 @@ h1 {
     display: none;
 }
 
+.safari-answers {
+    position: absolute;
+    left: 100px;
+    bottom: 258px;
+    
+}
+button {
+    position: absolute;
+    bottom: 280px;
+    left: 140px;
+    border-radius: 10px;
+    background-color: chocolate;
+    font-size: 1em;
+}
 .safari-keyboard {
     display: flex;
     height: 100vh;
