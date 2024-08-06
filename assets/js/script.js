@@ -1,9 +1,9 @@
 /**
  * An array of objects that will hold the questions, answers and the correct answer
  */
-let mySafariQuestions = ['What is the name of this animal?', 'Where does it live?', 
-    'What color is it?', 'How many legs does it have?', 'What food does this animal eat?', 
-    'What color are the spots?', 'Can a hippo swim?', 'What is the fastest animal?']
+let mySafariQuestions = ['1. What is the name of the above animal?', '2. What is its habitat?', 
+    '3. What color is it?', '4. How many legs does it have?', '5. Does it lay eggs?', 
+    '6. Is it fast or slow?', '7. How does it move?']
 
                     
 
