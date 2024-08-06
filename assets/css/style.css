@@ -64,6 +64,10 @@ h1 {
     padding: 3%;
     border-radius: 30%;
 }
+
+.safari-answerLine > p {
+    display: none;
+}
 .safari-answerLine {
     font-size: 1em;
     position: absolute;
@@ -74,12 +78,13 @@ h1 {
 
 button {
     position: absolute;
-    bottom: 280px;
-    left: 140px;
+    bottom: 35%;
+    left: 35%;
     border-radius: 10px;
     background-color: chocolate;
     font-size: 1em;
 }
+
 .safari-keyboard {
     display: flex;
     height: 100vh;

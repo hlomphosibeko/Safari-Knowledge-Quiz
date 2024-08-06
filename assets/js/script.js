@@ -7,14 +7,10 @@ let myAnimals = ['Cheetah', 'Elephant', 'Fish', 'Giraffe', 'Crocodile', 'Bird', 
 let mySafariQuestions = ['1. What is the name of the above animal?', '2. What is its habitat?', 
     '3. What color is it?', '4. How many legs does it have?', '5. Does it lay eggs?', 
     '6. Is it fast or slow?', '7. How does it move?'];
-function displaySafariQuestion(animalQuestion,  ) {
-    document.getElementById('animalQuestion1').textContent = animalQuestion1;
-    document.getElementById('animalQuestion1').textContent = animalQuestion2;
-    document.getElementById('animalQuestion1').textContent = animalQuestion3;
-    document.getElementById('animalQuestion1').textContent = animalQuestion4;
-    document.getElementById('animalQuestion1').textContent = animalQuestion5;
-    document.getElementById('animalQuestion1').textContent = animalQuestion6;
-    document.getElementById('animalQuestion1').textContent = animalQuestion7;
+
+    function displaySafariQuestion(animalQuestion, animalImage) {
+    document.getElementById('animalQuestion')[0].textContent = safari-questions;
+    document.getElementById('animalImage').textContent = safari-quizAnimals;
 }
 
 let mySafariAnswers = [ ]
@@ -71,7 +67,12 @@ document.addEventListener("DOMContentLoaded", function() {
 /**
  * when the click is registered, you want to compare the correct answer with the users answers
  */
+function checkUserAnswer() {
+    let animalQuestion = String(document.getElementById('animalQuestion').innerText);
+    let animalImage = String(document.getElementById('animalImage').innerText);
 
+    
+}
 
 /**
  * update the correct/incorrect counter and call the next question
