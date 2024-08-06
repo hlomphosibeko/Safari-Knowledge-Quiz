@@ -51,9 +51,6 @@ h1 {
     border-color: #d2691e;
 }
 
-.hidden-question {
-    display: none;
-}
 .my-questions {
     position: absolute;
     bottom: 420px;

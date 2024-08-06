@@ -7,7 +7,7 @@ let myAnimals = ['Cheetah', 'Elephant', 'Fish', 'Giraffe', 'Crocodile', 'Bird', 
 let mySafariQuestions = ['1. What is the name of the above animal?', '2. What is its habitat?', 
     '3. What color is it?', '4. How many legs does it have?', '5. Does it lay eggs?', 
     '6. Is it fast or slow?', '7. How does it move?'];
-function displayQuestion(animalQuestion1, animalQuestion2, animalQuestion3, animalQuestion4, animalQuestion5, animalQuestion6, animalQuestion7) {
+function displaySafariQuestion(animalQuestion,  ) {
     document.getElementById('animalQuestion1').textContent = animalQuestion1;
     document.getElementById('animalQuestion1').textContent = animalQuestion2;
     document.getElementById('animalQuestion1').textContent = animalQuestion3;
@@ -17,7 +17,7 @@ function displayQuestion(animalQuestion1, animalQuestion2, animalQuestion3, anim
     document.getElementById('animalQuestion1').textContent = animalQuestion7;
 }
 
-let mySafariAnswers = ['1.']
+let mySafariAnswers = [ ]
                 
 /**
  * Create a variable that will hold the index number of the question you are currently displaying
