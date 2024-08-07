@@ -90,14 +90,7 @@ h1 {
     border-radius: 10px;
 }
 
-button {
-    position: absolute;
-    bottom: 35%;
-    left: 35%;
-    border-radius: 10px;
-    background-color: chocolate;
-    font-size: 1em;
-}
+
 
 .safari-quizAnimals {
     display: none;

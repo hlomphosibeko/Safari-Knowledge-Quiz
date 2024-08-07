@@ -77,3 +77,17 @@ function checkUserAnswer() {
 /**
  * update the correct/incorrect counter and call the next question
  */
+
+let mySafariQuestions = document.getElementById('animal-question')
+
+function mySafariQuestions() {
+
+}
+
+function mySafariAnswers() {
+
+}
+
+function userScore() {
+
+}
