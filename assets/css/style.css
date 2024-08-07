@@ -84,40 +84,6 @@ button {
     font-size: 1em;
 }
 
-.safari-keyboard {
-    display: flex;
-    height: 100vh;
-}
-
-.keyboardRow {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.punchKey {
-    display: flex;
-    box-shadow: 0 -6px 10px rgb(255, 255, 255, 1), 0 4px 15px rgb(0, 0, 0, 0, 0.15);
-    transition: 0.5s;
-    height: 2.5em;
-    font-size: 1em;
-    width: 3em;
-    margin: 0.3em;
-    background-color: #f2f2f2;
-    border-radius: 0.5em;
-    line-height: 2.5em;
-    letter-spacing: 1px;
-    text-align: center;
-
-}
-
-.punchKey:hover {
-    cursor: pointer;
-    box-shadow: 0 2px 0 rgb(0, 0, 0, 0, 0.15);
-    top: 3px;
-}
-
 .safari-quizAnimals {
     /*display: none;*/
     position: absolute;
