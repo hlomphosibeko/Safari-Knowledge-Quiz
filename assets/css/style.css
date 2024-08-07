@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
 /* Font Family */
 .indie-flower-regular {
@@ -17,12 +20,17 @@ body {
     text-align: center;
     font-family: "Indie Flower", cursive;
     color: #d2691e;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Header */
 #logo {
-    border-radius: 50px;
-    margin-top: 30px;
+    border-radius: 40%;
+    margin-top: 10%
 }
 
 header a {
@@ -40,20 +48,17 @@ h1 {
 }
 
 /* Main content*/ 
-.safari-back {
-    background-position: center;
-    background-size: cover;  
-    background-repeat: no-repeat;
+.play-area {
     margin: 20px;
-    height: 50vh;
     border-style: ridge;
     border-color: #d2691e;
+    width: 800px;
+    max-width: 80%;
 }
 
-.my-questions {
-    position: absolute;
-    bottom: 420px;
-    left: 80px;
+.safari-questions {
+   
+   
 }
 .my-cheetah {
     position: absolute;

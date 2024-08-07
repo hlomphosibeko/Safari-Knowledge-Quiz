@@ -23,29 +23,35 @@
             <h2 id="get-started">How well do you know your ANIMALS👍...!</h2>
         </a>
     </header>
-    <main class="safari-back">
-        
-        <div class="safari-questions">
-            <!--
+    <div class="play-area">
+        <div id="question-container"></div>
+        <div id="question">Question</div>
+        <div id="answer-clue" class="btn-box">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+        </div>
+
+
+
+
+
+        <div class="safari-questions">    
             <p class="hidden-question" id="animalQuestion">What is the name of the above animal?</p>
             <p class="hidden-question" id="animalQuestion">What is its habitat?</p>
             <p class="hidden-question" id="animalQuestion">What color is it?</p> 
             <p class="hidden-question" id="animalQuestion">How many legs does it have?</p>
             <p class="hidden-question" id="animalQuestion">Does it lay eggs?</p>
             <p class="hidden-question" id="animalQuestion">Is it fast or slow?</p>
-            <p class="hidden-question" id="animalQuestion">How does it move?</p>
-            -->
+            <p class="hidden-question" id="animalQuestion">How does it move?</p>   
         </div>
-        <div class="my-questions">
-            <p>What is the name of the above animal?</p>
-        </div>
+
         <div class="safari-quizAnimals">
-           <!-- 
             <img id="animalImage" src="assets/images/cheetah.jpg">
             <img id="animalImage" src="assets/images/giraffe.jpg">
             <img id="animalImage" src="assets/images/crocodile.jpg">
             <img id="animalImage" src="assets/images/elephant.jpg">
-            <img id="animalImage" src="assets/images/hippo.jpg">
+        <!--<img id="animalImage" src="assets/images/hippo.jpg">
             <img id="animalImage" src="assets/images/lion.jpg">
             <img id="animalImage" src="assets/images/tiger.jpg">
             <img id="animalImage" src="assets/images/zebra.jpg">
@@ -54,16 +60,14 @@
             <img id="animalImage" src="assets/images/frog.jpg">
             <img id="animalImage" src="assets/images/tortoise.jpg"> -->    
         </div>
-        <div class="my-cheetah">
-            <img src="assets/images/cheetah.jpg">
-        </div>
+
 
         <div class="safari-answerLine">
             <p>Enter Answer:</p>
             <input id="answer-area" type="text" >
         </div>
         <button data-type="submit">Submit Answer</button>
-    </main>
+    </div>
     <div class="safari-points">
         <p class="points"><strong>Correct Answer: </strong><span class="correctPoints">0</span></p>
         <p class="points"><strong>Incorrect Answer: </strong><span class="incorrectPoints">0</span></p>
