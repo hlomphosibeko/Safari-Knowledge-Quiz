@@ -1,8 +1,8 @@
 /**
  * An array of objects that will hold the questions, answers and the correct answer
  */
-let myAnimals = ['Cheetah', 'Elephant', 'Fish', 'Giraffe', 'Crocodile', 'Bird', 'Frog', 
-                 'Hippo', 'Lion', 'Tiger', 'Tortoise', 'Zebra']
+let myAnimals = ['cheetah', 'elephant', 'fish', 'giraffe', 'crocodile', 'bird', 'frog', 
+                 'hippo', 'lion', 'tiger', 'tortoise', 'zebra']
                  
 let mySafariQuestions = ['1. What is the name of the above animal?', '2. What is its habitat?', 
     '3. What color is it?', '4. How many legs does it have?', '5. Does it lay eggs?', 

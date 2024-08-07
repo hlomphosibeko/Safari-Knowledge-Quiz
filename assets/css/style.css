@@ -41,7 +41,6 @@ h1 {
 
 /* Main content*/ 
 .safari-back {
-    background-image: url('../images/safari-bild.jpg');
     background-position: center;
     background-size: cover;  
     background-repeat: no-repeat;
