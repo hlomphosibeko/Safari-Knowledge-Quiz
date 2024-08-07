@@ -78,10 +78,13 @@ function checkUserAnswer() {
  * update the correct/incorrect counter and call the next question
  */
 
-let mySafariQuestions = document.getElementById('animal-question')
+let myQuestions = document.getElementById('safari-question')
+
+
 
 function mySafariQuestions() {
-
+    safariQuestionElement.classList.add('hide')
+    
 }
 
 function mySafariAnswers() {

@@ -20,11 +20,9 @@ body {
     text-align: center;
     font-family: "Indie Flower", cursive;
     color: #d2691e;
-    display: flex;
     width: 100vw;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
+   
 }
 
 /* Header */
@@ -48,13 +46,27 @@ h1 {
 }
 
 /* Main content*/ 
-.play-area {
 
+#question-container {
+    margin: 5%;
     border-style: ridge;
     border-color: #d2691e;
-    width: 800px;
-    max-width: 80%;
     box-shadow: 0 0 10px 2px;
+    height: 50vh;
+}
+
+.safari-question {
+    font-weight: bold;
+    border-bottom: 1px solid #d2691e;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.safari-quizAnimals {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-items: center;
 }
 
 .btn-box {
@@ -79,19 +91,7 @@ h1 {
     color: #d2691e;
 }
 
-.safari-answerLine > p {
-    display: none;
-}
-/*.safari-answerLine {
-    font-size: 1em;
-    position: absolute;
-    left: 100px;
-    bottom: 320px;
-    border-radius: 10px;
-}
-
-
-
+/*
 .safari-quizAnimals {
     display: none;
     position: absolute;
