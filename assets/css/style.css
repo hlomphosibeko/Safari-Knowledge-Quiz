@@ -49,30 +49,44 @@ h1 {
 
 /* Main content*/ 
 .play-area {
-    margin: 20px;
+
     border-style: ridge;
     border-color: #d2691e;
     width: 800px;
     max-width: 80%;
+    box-shadow: 0 0 10px 2px;
 }
 
+.btn-box {
+    display: grid;
+    gap: 10%;
+    margin: 10% 0;
+ 
+}
+
+.btn {
+    background-color: #f19553;
+    border-style: ridge;
+    border-color: #d2691e;
+    box-shadow: 0 0 10px 2px;
+    color: beige;
+    margin: 0 5% 2%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #d2691e;
+}
 .safari-questions {
    
    
-}
-.my-cheetah {
-    position: absolute;
-    bottom: 53%;
-    background-color: chocolate;
-    left: 150px;
-    padding: 3%;
-    border-radius: 30%;
 }
 
 .safari-answerLine > p {
     display: none;
 }
-.safari-answerLine {
+/*.safari-answerLine {
     font-size: 1em;
     position: absolute;
     left: 100px;
@@ -90,9 +104,9 @@ button {
 }
 
 .safari-quizAnimals {
-    /*display: none;*/
+    display: none;
     position: absolute;
-}
+}*/
 
 /* User Points */
 .safari-points {
