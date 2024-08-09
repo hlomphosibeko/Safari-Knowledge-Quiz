@@ -15,6 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
+function goAnimalQuiz() {
+    let safariQuestion = Math.floor(Math.random());
+    let safariQuizAnimals = Math.floor(Math.random());
+}
+
 
 
 
