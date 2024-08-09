@@ -1,4 +1,24 @@
-const safariQuestions = document.querySelector(".safari-questions");
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("data-type") === "btn") {
+                alert("You clicked answer button!")
+            } else {
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`);
+            }
+        }) 
+    
+        
+    }
+})
+
+
+
+
+/*const safariQuestions = document.querySelector(".safari-questions");
 const safariQuizAnimals = document.querySelector(".safari-quizAnimals");
 const allAnswerClues = document.querySelectorAll(".btn");
 const answerClue1 = document.querySelector("#answer1");
@@ -7,11 +27,22 @@ const answerClue3 = document.querySelector("#answer3");
 const answerClue4 = document.querySelector("#answer4");
 const safariPoints = document.querySelector(".safari-points");
 
-// My Questionair
+function fetchMyQuestion(mySafariQuestions) {
+    let safariQuestions = [];
+    for (let i = 0; i < mySafariQuestions; i++) {
+        safariQuestions.push('question');
+    }
+    return safariQuestions;
+}
+
+fetchMyQuestion(7);
+
+// My array of questions, answers and correct answer
+
 let mySafariQuestions = [
     {
-        question: "What is the name of the above animal?",
-        questionImg: "img/bird.jpg",
+        safariQuestion: "What is the name of the above animal?",
+        safariQuizAnimals: "img/bird.jpg",
         Answer1: "bird",
         Answer2: "tiger",
         Answer3: "frog",
@@ -74,3 +105,13 @@ let mySafariQuestions = [
     }
 ];
 
+// Variable which will hold the index number of the question currently displayed
+
+
+
+// Function that will generate a random number from the array
+
+
+
+// Function that will pull a question from the array of objects
+*/

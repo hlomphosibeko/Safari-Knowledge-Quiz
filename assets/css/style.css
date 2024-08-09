@@ -62,33 +62,7 @@ h1 {
     justify-content: center;
     text-align: center;
 }
-#start-btn {
-    background-color:darkolivegreen;
-    border-style: ridge;
-    border-color: #d2691e;
-    box-shadow: 0 0 10px 2px;
-    color: beige;
-    margin: 0 5% 2%;
-}
-#start-btn:hover {
-    cursor: pointer;
-    background-color: white;
-    color: #556b2f;  
-}
 
-#next-btn {
-    background-color: #556b2f;
-    border-style: ridge;
-    border-color: #d2691e;
-    box-shadow: 0 0 10px 2px;
-    color: beige;
-    margin: 0 5% 2%;
-}
-#next-btn:hover {
-    cursor: pointer;
-    background-color: white;
-    color: #556b2f;
-}
 
 .safari-quizAnimals {
     display: flex;
@@ -118,6 +92,10 @@ h1 {
     color: #d2691e;
 }
 
+.btn::after {
+    content: attr(data-type);
+}
+
 /*
 .safari-quizAnimals {
     display: none;
@@ -130,4 +108,5 @@ h1 {
     margin-left: 20px;
     font-size: medium;
     letter-spacing: 5px;
+    font-weight: bold;
 }
