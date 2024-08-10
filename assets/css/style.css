@@ -57,17 +57,16 @@ h1 {
 
 .safari-question {
     font-weight: bold;
-    border-bottom: 1px solid #d2691e;
     display: flex;
     justify-content: center;
     text-align: center;
+    padding: 5% 0;
 }
 
 
 .safari-quizAnimals {
-    display: flex;
-    flex-wrap: nowrap;
     justify-items: center;
+    padding: 5%;
 }
 
 .btn-box {

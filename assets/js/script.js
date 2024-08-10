@@ -7,23 +7,29 @@ document.addEventListener("DOMContentLoaded", function() {
                 alert("You clicked answer button!")
             } else {
                 let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
+                goAnimalQuiz(gameType);
             }
         }) 
-    
-        
+      
     }
+
+    goAnimalQuiz("safariQuestions")
 })
 
-function goAnimalQuiz() {
-    let safariQuestion = Math.floor(Math.random());
-    let safariQuizAnimals = Math.floor(Math.random());
+function goAnimalQuiz(gameType) {
+    let question = Math.floor(Math.random());
+    let questionImg = Math.floor(Math.random());
+
+    
+   
 }
 
 
 
 
-/*const safariQuestions = document.querySelector(".safari-questions");
+
+
+const safariQuestions = document.querySelector(".safari-questions");
 const safariQuizAnimals = document.querySelector(".safari-quizAnimals");
 const allAnswerClues = document.querySelectorAll(".btn");
 const answerClue1 = document.querySelector("#answer1");
@@ -46,8 +52,8 @@ fetchMyQuestion(7);
 
 let mySafariQuestions = [
     {
-        safariQuestion: "What is the name of the above animal?",
-        safariQuizAnimals: "img/bird.jpg",
+        question: "What is the name of the above animal?",
+        questionImg: "img/bird.jpg",
         Answer1: "bird",
         Answer2: "tiger",
         Answer3: "frog",
@@ -119,4 +125,4 @@ let mySafariQuestions = [
 
 
 // Function that will pull a question from the array of objects
-*/
+
