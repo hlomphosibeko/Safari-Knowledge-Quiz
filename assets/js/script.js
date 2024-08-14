@@ -7,9 +7,12 @@ var button = document.querySelector('button')
 var answer = "";
 
 function myAnswer() {
-    if (answer !== correctAnswer) {
-        console.log("Incorrect Answer!")
-        alert("The correct answer is [correctAnswer]")
+    if (answer === correctAnswer) {
+        console.log("Correct Answer!")
+        alert("Your answer is correct. You did well!")
+    } else {
+        console.log("That is an incorrecet answer.")
+        alert("Oops! Try again.")
     }
 }
 
