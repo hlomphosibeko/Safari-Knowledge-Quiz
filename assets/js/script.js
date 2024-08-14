@@ -1,42 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+var button = document.querySelector('button')
+    button.addEventListner('click', function() {
+        console.log('clicked')
+        alert("answer button has been clicked")
+    })
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "btn") {
-                alert("You clicked answer button!")
-            } else {
-                let gameType = this.getAttribute("data-type");
-                goAnimalQuiz(gameType);
-            }
-        }) 
-      
-    }
 
-    goAnimalQuiz("safariQuestions")
-})
-
-function goAnimalQuiz(gameType) {
-    let question = Math.floor(Math.random());
-    let questionImg = Math.floor(Math.random());
-
+let myRandomQuestion = myQuestion[0][myListOfKeys[Math.abs(6 - Math.floor(Math.random() * 10))]];
     
    
-}
 
 
-
-
-
-
-const safariQuestions = document.querySelector(".safari-questions");
-const safariQuizAnimals = document.querySelector(".safari-quizAnimals");
-const allAnswerClues = document.querySelectorAll(".btn");
-const answerClue1 = document.querySelector("#answer1");
-const answerClue2 = document.querySelector("#answer2");
-const answerClue3 = document.querySelector("#answer3");
-const answerClue4 = document.querySelector("#answer4");
-const safariPoints = document.querySelector(".safari-points");
 
 function fetchMyQuestion(mySafariQuestions) {
     let safariQuestions = [];
