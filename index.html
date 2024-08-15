@@ -36,13 +36,15 @@
             
         </div>
         <!-- Answer Section-->
-        <div id="answer-clue" class="btn-box">
-            <button data-type="userAnswer1" class="btn" id="answer1" onclick="myAnswer()"></button>
-            <button data-type="userAnswer2" class="btn" id="answer2" onclick="myAnswer()"></button>
-            <button data-type="userAnswer3" class="btn" id="answer3" onclick="myAnswer()"></button>
-            <button data-type="userAnswer4" class="btn" id="answer4" onclick="myAnswer()"></button>
-        </div>
-
+        <form id="answer-clue" class="btn-box">
+            <input type="radio" class="btn" id="answer1"> bird
+            <input type="radio" class="btn" id="answer1"> tiger
+            <input type="radio" class="btn" id="answer1"> frog
+            <input type="radio" class="btn" id="answer1"> fish
+        </form>
+        <button id="checkAnswer">Check Answer</button>
+        <div id="correct" class="hide">Correct Answer</div>
+        <div id="wrong" class="hide">Wrong Answer</div>
     </div>
     <!-- Scoring -->
     <div class="safari-points">

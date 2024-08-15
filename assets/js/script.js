@@ -4,6 +4,12 @@ var button = document.querySelector('button')
         alert("answer button has been clicked")
     })
 
+let myQuestion = "";
+    
+
+
+
+
 var answer = "";
 
 function myAnswer() {
