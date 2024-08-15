@@ -1,34 +1,11 @@
+
 var button = document.querySelector('button')
     button.addEventListner('click', function() {
         console.log('clicked')
         alert("answer button has been clicked")
     })
 
-let myQuestion = "";
-    
-
-
-
-
-var answer = "";
-
-function myAnswer() {
-    if (answer === correctAnswer) {
-        console.log("Correct Answer!")
-        alert("Your answer is correct. You did well!")
-    } else {
-        console.log("That is an incorrecet answer.")
-        alert("Oops! Try again.")
-    }
-}
-
-
-
-let myRandomQuestion = myQuestion[0][myListOfKeys[Math.abs(6 - Math.floor(Math.random() * 10))]];
-    
-   
-
-
+let myQuestion = "";     
 
 function fetchMyQuestion(mySafariQuestions) {
     let safariQuestions = [];
@@ -38,7 +15,36 @@ function fetchMyQuestion(mySafariQuestions) {
     return safariQuestions;
 }
 
-fetchMyQuestion(7);
+fetchMyQuestion(7); 
+
+
+
+
+function checkAnswer(){
+    addClass(document.getElementById('correct').hide,);
+    addClass(document.getElementById('wrong').hide,);
+
+    if (answer === correctAnswer) {
+        console.log("Correct Answer!");
+        removeClass(document.getElementById('correct').hide,);  
+    } else {
+        console.log("That is an incorrecet answer.");
+        removeClass(document.getElementById('wrong').hide,);
+    }
+}
+checkAnswer();
+
+
+
+
+
+let myRandomQuestion = myQuestion[0][myListOfKeys[Math.abs(6 - Math.floor(Math.random() * 10))]];
+    
+   
+
+
+
+
 
 // My array of questions, answers and correct answer
 
