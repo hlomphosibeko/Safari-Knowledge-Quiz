@@ -63,45 +63,35 @@ h1 {
     padding: 5% 0;
 }
 
-
 .safari-quizAnimals {
     justify-items: center;
     padding: 5%;
 }
 
-.btn-box {
-    display: grid;
-    gap: 10%;
-    margin: 10% 0;
- 
+#answer-clue {
+    letter-spacing: 1.5px;
+    color: #d2691e;   
 }
 
-.btn {
-    background-color: #f19553;
-    border-style: ridge;
-    border-color: #d2691e;
-    box-shadow: 0 0 10px 2px;
-    color: beige;
-    margin: 0 5% 2%;
-}
-
-.btn:hover {
+#answer-clue:hover {
     cursor: pointer;
-    background-color: white;
-    color: #d2691e;
 }
 
-.btn::after {
+#answer-clue::after {
     content: attr(data-type);
 }
 
-/*
-.safari-quizAnimals {
-    display: none;
-    position: absolute;
-}*/
-
 /* User Points */
+#checkAnswer {
+    background-color: #d2691e;
+    color: beige;
+    font-family: inherit;
+    width: 30%;
+}
+#checkAnswer:hover {
+    background-color: white;
+    color: #d2691e;
+}
 .safari-points {
     display: flex;
     margin-left: 20px;

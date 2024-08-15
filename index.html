@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,36 +24,27 @@
     </header>
     <!-- Playground area -->
     <div class="playground">
-        <div id="question-container">
-            
+        <div id="question-container"> 
             <div class="safari-question">
                 What is the name of the below animal?
             </div>  
             <div class="safari-quizAnimals">
                 <img src="assets/images/bird.jpg">
-            </div> 
-            
+            </div>     
         </div>
         <!-- Answer Section-->
-        <form id="answer-clue" class="btn-box">
-            <input type="radio" class="btn" id="answer1"> bird
-            <input type="radio" class="btn" id="answer1"> tiger
-            <input type="radio" class="btn" id="answer1"> frog
-            <input type="radio" class="btn" id="answer1"> fish
+        <form id="answer-clue">
+            <input type="radio" name="response" value="choose-answer" id="answer1"> bird
+            <input type="radio" name="response" value="choose-answer" id="answer2"> tiger
+            <input type="radio" name="response" value="choose-answer" id="answer3"> frog
+            <input type="radio" name="response" value="choose-answer" id="answer4"> fish
         </form>
+        <!-- Scoring -->
         <button id="checkAnswer">Check Answer</button>
-        <div id="correct" class="hide">Correct Answer</div>
-        <div id="wrong" class="hide">Wrong Answer</div>
-    </div>
-    <!-- Scoring -->
-    <div class="safari-points">
-        <p class="points"><strong>Correct Answer: </strong><span class="correctPoints">0</span></p>
-        <p class="points"><strong>Incorrect Answer: </strong><span class="incorrectPoints">0</span></p>
-    </div>
-    
+        <div id="correct" class="hide points">Correct Answer</div>
+        <div id="wrong" class="hide points">Wrong Answer</div>
+    </div>   
 <body>
-
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>
