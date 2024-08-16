@@ -97,7 +97,7 @@ h1 {
 }
 
 /* User Points */
-#checkAnswer {
+.btn {
     background-color: #d2691e;
     color: beige;
     font-family: inherit;
@@ -105,9 +105,23 @@ h1 {
     border-radius: 15px;
     font-weight: bold;
 }
-#checkAnswer:hover {
+.btn:hover {
     background-color: white;
     color: #d2691e;
+}
+
+#correct {
+    background-color: green;
+    color: black;
+    font-weight: bold;
+    font: 1.5em;
+}
+
+#wrong {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+    font: 1.5em;
 }
 
 .hide {
