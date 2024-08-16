@@ -1,50 +1,20 @@
+function myRadio() {
+    console.log('You clicked a button')
+}
+let input = document.getElementsByTagName('input')
+    input.addEventListener('click', myRadio);
 
-var button = document.querySelector('button')
-    button.addEventListner('click', function() {
-        console.log('clicked')
-        alert("answer button has been clicked")
-    })
-
-let myQuestion = "";     
+let myListOfKeys = ['question', 'questionImg', 'Answer1', 'Answer2', 'Answer3', 'Answer4', ' correctAnswer']    
+let myQuestion =  mySafariQuestions[0][myListOfKeys[Math.abs(6 - Math.floor(Math.random() * 10))]];    
 
 function fetchMyQuestion(mySafariQuestions) {
     let safariQuestions = [];
     for (let i = 0; i < mySafariQuestions; i++) {
-        safariQuestions.push('question');
+        safariQuestions.push('safariQuestion');
     }
     return safariQuestions;
 }
-
 fetchMyQuestion(7); 
-
-
-
-
-function checkAnswer(){
-    addClass(document.getElementById('correct').hide,);
-    addClass(document.getElementById('wrong').hide,);
-
-    if (answer === correctAnswer) {
-        console.log("Correct Answer!");
-        removeClass(document.getElementById('correct').hide,);  
-    } else {
-        console.log("That is an incorrecet answer.");
-        removeClass(document.getElementById('wrong').hide,);
-    }
-}
-checkAnswer();
-
-
-
-
-
-let myRandomQuestion = myQuestion[0][myListOfKeys[Math.abs(6 - Math.floor(Math.random() * 10))]];
-    
-   
-
-
-
-
 
 // My array of questions, answers and correct answer
 
@@ -113,6 +83,25 @@ let mySafariQuestions = [
         correctAnswer: "walk",
     }
 ];
+
+
+
+function checkAnswer(){
+    addClass(document.getElementById('correct').hide,);
+    addClass(document.getElementById('wrong').hide,);
+
+    if (answer === correctAnswer) {
+        console.log("Correct Answer!");
+        removeClass(document.getElementById('correct').hide,);  
+    } else {
+        console.log("That is an incorrecet answer.");
+        removeClass(document.getElementById('wrong').hide,);
+    }
+}
+checkAnswer();
+
+
+
 
 // Variable which will hold the index number of the question currently displayed
 

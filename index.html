@@ -23,6 +23,10 @@
         </a>
     </header>
     <!-- Playground area -->
+     <form class="username">
+        <label for="username">Who is playing:</label>
+        <input id="user-name" name="username" type="text" onchange="console.log('A username is inserted');">
+     </form>
     <div class="playground">
         <div id="question-container"> 
             <div class="safari-question">
@@ -34,7 +38,7 @@
         </div>
         <!-- Answer Section-->
         <form id="answer-clue">
-            <input type="radio" name="response" value="choose-answer" id="answer1"> bird
+            <input onclick="" type="radio" name="response" value="choose-answer" id="answer1"> bird
             <input type="radio" name="response" value="choose-answer" id="answer2"> tiger
             <input type="radio" name="response" value="choose-answer" id="answer3"> frog
             <input type="radio" name="response" value="choose-answer" id="answer4"> fish

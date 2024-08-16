@@ -47,6 +47,19 @@ h1 {
 
 /* Main content*/ 
 
+#user-name {
+    border-radius: 15px;
+    border: 2px solid chocolate;
+    background-color: chocolate;
+    color: white;
+    box-shadow: 0 0 10px 2px;
+    text-align: center;
+}
+
+.username {
+    font-weight: bold;
+}
+
 #question-container {
     margin: 5%;
     border-style: ridge;
@@ -61,6 +74,7 @@ h1 {
     justify-content: center;
     text-align: center;
     padding: 5% 0;
+    font-size: 1.5em;
 }
 
 .safari-quizAnimals {
@@ -70,7 +84,8 @@ h1 {
 
 #answer-clue {
     letter-spacing: 1.5px;
-    color: #d2691e;   
+    color: #d2691e; 
+    font-weight: bold;  
 }
 
 #answer-clue:hover {
