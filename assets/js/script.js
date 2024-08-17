@@ -67,15 +67,16 @@ let mySafariQuestions = [
 function replace() {
  // let question = document.getElementById("my-box");
  // question.innerHTML = "Where do you stay?";
- //let x = Math.abs(6 - Math.floor(Math.random() * 10));
- //document.getElementsByClassName("safari-question").innerText = mySafariQuestions[x][safariQuestion];
+ let x = Math.abs(6 - Math.floor(Math.random() * 10));
+ //document.getElementsByClassName("safari-question").innerText = mySafariQuestions[x]['safariQuestion'];
  //document.getElementsByClassName('safari-quizAnimals')[0] = mySafariQuestions[Math.abs(6 - Math.floor(Math.random() * 10))]['safariQuizAnimals'];
-  //document.getElementsByTagName('p')[0].innerText=mySafariQuestions[0];
+//document.getElementsByTagName('p')[0].innerText=mySafariQuestions[Math.abs(6 - Math.floor(Math.random() * 10))];
 //document.getElementsByClassName("safari-quizAnimals").src= `assets/images/bird.jpg`
   //document.getElementsByTagName('img')='assets/images/crocodile.jpg';
- //console.log(document.getElementsByTagName('p')[0].innerText)
-//console.log(mySafariQuestions[Math.abs(6 - Math.floor(Math.random() * 10))]['safariQuestion'])
-document.getElementsByClassName("safari-quizAnimals")[0].innerHTML='<img src="assets/images/cheetah.jpg">'
+ document.getElementsByTagName('p')[0].innerText=mySafariQuestions[x]['safariQuestion']
+ //document.getElementsByClassName("safari-question").innerText=mySafariQuestions[Math.abs(6 - Math.floor(Math.random() * 10))]['safariQuestion']
+//document.getElementsByClassName("safari-quizAnimals")[0].innerHTML='<img src="assets/images/cheetah.jpg">'
+document.getElementsByClassName("safari-quizAnimals")[0].innerHTML=mySafariQuestions[x]['safariQuizAnimals']
 }
 
 window.onload = replace();
