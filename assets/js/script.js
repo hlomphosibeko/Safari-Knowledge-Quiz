@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+    let mySubmit = document.querySelectorAll('input[type=submit]');
+    //let buttons = document.querySelectorAll('input[type=radio]');
+    
+
+    for (let sub of mySubmit) {
+        sub.addEventListener('click', function() {
+                if(this.getAttribute("type") === "submit") {
+                    alert("You clicked Submit!")
+                 }
+    
+    })}}
+
+
+  /**  for (let btn of buttons) {
+        btn.addEventListener('click', function() {
+                     let gameType = this.getAttribute("id");
+                     startGame(gameType);
+        })
+    
+    }}*/)
+
+
+
+
 let mySafariQuestions = [
     {
         safariQuestion: "What is the name of the above animal?",
