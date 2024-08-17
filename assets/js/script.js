@@ -1,3 +1,158 @@
+let mySafariQuestions = [
+    {
+        safariQuestion: "What is the name of the above animal?",
+        safariQuizAnimals: '<img src="assets/images/bird.jpg">',
+        Answer1: "bird",
+        Answer2: "tiger",
+        Answer3: "frog",
+        Answer4: "fish",
+        correctAnswer: "bird",
+    },
+    {
+        safariQuestion: "Where does this animal live?",
+        safariQuizAnimals: '<img src="assets/images/cheetah.jpg">',
+        Answer1: "in the ocean",
+        Answer2: "at the zoo",
+        Answer3: "space",
+        Answer4: "in a house",
+        correctAnswer: "at the zoo",
+    },
+    {
+        safariQuestion: "What color is it?",
+        safariQuizAnimals: '<img src="assets/images/crocodile.jpg">',
+        Answer1: "yellow",
+        Answer2: "purple",
+        Answer3: "brown",
+        Answer4: "green",
+        correctAnswer: "green",
+    },
+    {
+        safariQuestion: "How many legs does it have?",
+        safariQuizAnimals: '<img src="assets/images/fish.jpg">',
+        Answer1: "2",
+        Answer2: "4",
+        Answer3: "8",
+        Answer4: "0",
+        correctAnswer: "0",
+    },
+    {
+        safariQuestion: "Does it lay eggs?",
+        safariQuizAnimals: '<img src="assets/images/frog.jpg">',
+        Answer1: "no",
+        Answer2: "only in summer",
+        Answer3: "no idea",
+        Answer4: "yes",
+        correctAnswer: "yes",
+    },
+    {
+        safariQuestion: "Is this animal fast or slow?",
+        safariQuizAnimals: '<img src="assets/images/tortoise.jpg">',
+        Answer1: "it is slow",
+        Answer2: "it is fast",
+        Answer3: "it can't move",
+        Answer4: "it is fast only when it is hungry",
+        correctAnswer: "it is slow",
+    },
+    {
+        safariQuestion: "How does it move?",
+        safariQuizAnimals: '<img src="assets/images/zebra.jpg">',
+        Answer1: "walk",
+        Answer2: "hops",
+        Answer3: "swim",
+        Answer4: "crawl",
+        correctAnswer: "walk",
+    }
+];
+
+function replace() {
+ // let question = document.getElementById("my-box");
+ // question.innerHTML = "Where do you stay?";
+ //let x = Math.abs(6 - Math.floor(Math.random() * 10));
+ //document.getElementsByClassName("safari-question").innerText = mySafariQuestions[x][safariQuestion];
+ //document.getElementsByClassName('safari-quizAnimals')[0] = mySafariQuestions[Math.abs(6 - Math.floor(Math.random() * 10))]['safariQuizAnimals'];
+  //document.getElementsByTagName('p')[0].innerText=mySafariQuestions[0];
+//document.getElementsByClassName("safari-quizAnimals").src= `assets/images/bird.jpg`
+  //document.getElementsByTagName('img')='assets/images/crocodile.jpg';
+ //console.log(document.getElementsByTagName('p')[0].innerText)
+//console.log(mySafariQuestions[Math.abs(6 - Math.floor(Math.random() * 10))]['safariQuestion'])
+document.getElementsByClassName("safari-quizAnimals")[0].innerHTML='<img src="assets/images/cheetah.jpg">'
+}
+
+window.onload = replace();
+    
+
+
+
+
+
+/**
+ * A variable which consists of a list of objects with 
+ * questions and answers.
+ */
+
+
+
+function myDisplayedQuestions(safariQuestion, safariQuizAnimals) {
+    let x = Math.abs(6 - Math.floor(Math.random() * 10));
+
+    document.getElementsByClassName("safari-question").innerText = mySafariQuestions[x][safariQuestion];
+    document.getElementsByClassName("safari-quizAnimals").innerHTML = mySafariQuestions[x][safariQuizAnimals];
+}
+
+function displayBirdAnswer() {
+    if (document.getElementById("answer1").checked) {
+        document.getElementById("answer1").textContent = mySafariQuestions[0]['correctAnswer'];
+    } else if (document.getElementById("answer2").checked) {
+            alert(`You selected ${document.getElementById("answer2")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
+        } else if (document.getElementById("answer3").checked) {
+            alert(`You selected ${document.getElementById("answer3")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
+        } else if (document.getElementById("answer4").checked) {
+            alert(`You selected ${document.getElementById("answer4")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`) 
+        } else {throw `You selected ${document.getElementById("answer4")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`}      
+}
+
+function displayCheetahAnswer() {
+    if (document.getElementById("answer1").checked) {
+        alert(`You selected ${document.getElementById("answer1")
+        .textContent} which is incorrect. The correct answer is ${document.getElementById("answer2")}`)
+    } else if (document.getElementById("answer2").checked) {
+        document.getElementById("answer2").textContent = mySafariQuestions[0]['correctAnswer']; 
+        } else if (document.getElementById("answer3").checked) {
+            alert(`You selected ${document.getElementById("answer3")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
+        } else if (document.getElementById("answer4").checked) {
+            alert(`You selected ${document.getElementById("answer4")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`) 
+        } else {
+            throw `You selected ${document.getElementById("answer4")
+            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**function myFunction(event) {
+    console.log('You clicked the button!');
+   
+    }
+
+let myButton = document.getElementsByClassName("btn");
+myButton.addEventListener('click', myFunction);
+
+**/
+/**
 document.addEventListener("DOMContentLoaded", function() {
     let button = document.getElementsByClassName('btn');
 
@@ -15,96 +170,8 @@ document.addEventListener("DOMContentLoaded", function() {
     startGame("mySafariQuesions");
 })
 
-function myDisplayedQuestions(safariQuestion, safariQuizAnimals) {
-    let x = Math.abs(6 - Math.floor(Math.random() * 10));
+function startGame(gameType) {
 
-    document.getElementsByClassName("safari-question").innerText = mySafariQuestions[x][safariQuestion];
-    document.getElementsByClassName("safari-quizAnimals").innerHTML = mySafariQuestions[x][safariQuizAnimals];
-
-    myDisplayedQuestions();
 }
 
-function displayAnswer1() {
-    if (document.getElementById("answer1").checked) {
-        document.getElementById("answer1").textContent = mySafariQuestions[0][correctAnswer];
-    } else if (document.getElementById("answer2").checked) {
-            alert(`You selected ${document.getElementById("answer2")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
-        }
-    
-        displayAnswer1();
-}
-
-/**
- * A variable which consists of a list of objects with 
- * questions and answers.
  */
-let mySafariQuestions = [
-    {
-        safariQuestion: "What is the name of the above animal?",
-        safariQuizAnimals: "img/bird.jpg",
-        Answer1: "bird",
-        Answer2: "tiger",
-        Answer3: "frog",
-        Answer4: "fish",
-        correctAnswer: "bird",
-    },
-    {
-        safariQuestion: "Where does this animal live?",
-        safariQuizAnimals: "img/cheetah.jpg",
-        Answer1: "in the ocean",
-        Answer2: "at the zoo",
-        Answer3: "space",
-        Answer4: "in a house",
-        correctAnswer: "at the zoo",
-    },
-    {
-        safariQuestion: "What color is it?",
-        safariQuizAnimals: "img/crocodile.jpg",
-        Answer1: "yellow",
-        Answer2: "purple",
-        Answer3: "brown",
-        Answer4: "green",
-        correctAnswer: "green",
-    },
-    {
-        safariQuestion: "How many legs does it have?",
-        safariQuizAnimals: "img/fish.jpg",
-        Answer1: "2",
-        Answer2: "4",
-        Answer3: "8",
-        Answer4: "0",
-        correctAnswer: "0",
-    },
-    {
-        safariQuestion: "Does it lay eggs?",
-        safariQuizAnimals: "img/frog.jpg",
-        Answer1: "no",
-        Answer2: "only in summer",
-        Answer3: "no idea",
-        Answer4: "yes",
-        correctAnswer: "yes",
-    },
-    {
-        safariQuestion: "Is this animal fast or slow?",
-        safariQuizAnimals: "img/tortoise.jpg",
-        Answer1: "it is slow",
-        Answer2: "it is fast",
-        Answer3: "it can't move",
-        Answer4: "it is fast only when it is hungry",
-        correctAnswer: "it is slow",
-    },
-    {
-        safariQuestion: "How does it move?",
-        safariQuizAnimals: "img/zebra.jpg",
-        Answer1: "walk",
-        Answer2: "hops",
-        Answer3: "swim",
-        Answer4: "crawl",
-        correctAnswer: "walk",
-    }
-];
-
-
-
-
