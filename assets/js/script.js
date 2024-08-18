@@ -1,26 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    let mySubmit = document.querySelectorAll('input[type=submit]');
-    //let buttons = document.querySelectorAll('input[type=radio]');
+  //  let mySubmit = document.querySelectorAll('input[type=submit]');
+    let buttons = document.querySelectorAll('input[type=radio]');
     
+     /**  for (let sub of mySubmit) {
+        sub.addEventListener('click', function() {if(this.getAttribute("type") === "submit") {
+        alert("You clicked Submit!")
+     }
+     else {*/
+        for (let btn of buttons) {
+            btn.addEventListener('click', function() {
+                let gameType = this.id;
+                     //console.log(this.getElementById.innerHTML)
+                     //startGame(gameType);
+                console.log(gameType)
+                     
+        })
+    
+    }})
 
-    for (let sub of mySubmit) {
+  /**  for (let sub of mySubmit) {
         sub.addEventListener('click', function() {
                 if(this.getAttribute("type") === "submit") {
                     alert("You clicked Submit!")
                  }
     
     })}}
-
-
-  /**  for (let btn of buttons) {
-        btn.addEventListener('click', function() {
-                     let gameType = this.getAttribute("id");
-                     startGame(gameType);
-        })
-    
-    }}*/)
-
+*/
 
 
 
@@ -100,9 +106,9 @@ function myCorrectOptionsDisplay(x) {
 
 document.getElementById("answer-clue").innerHTML=
 `<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer1']} 
-<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer2']} 
-<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer3']} 
-<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer4']}`
+<input type="radio" name="response" value="choose-answer" id="answer2">${mySafariQuestions[x]['Answer2']} 
+<input type="radio" name="response" value="choose-answer" id="answer3">${mySafariQuestions[x]['Answer3']} 
+<input type="radio" name="response" value="choose-answer" id="answer4">${mySafariQuestions[x]['Answer4']}`
 
 }
 
@@ -111,8 +117,8 @@ function replace() {
 let x = Math.abs(6 - Math.floor(Math.random() * 10));
 document.getElementsByTagName('p')[0].innerText=mySafariQuestions[x]['safariQuestion']
 document.getElementsByClassName("safari-quizAnimals")[0].innerHTML=mySafariQuestions[x]['safariQuizAnimals']
-myCorrectAnswer(x);
 myCorrectOptionsDisplay(x);
+myCorrectAnswer(x);
 }
 
 window.onload = replace();
