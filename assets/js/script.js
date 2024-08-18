@@ -11,9 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let btn of buttons) {
             btn.addEventListener('click', function() {
                 let gameType = this.id;
-                     //console.log(this.getElementById.innerHTML)
-                     //startGame(gameType);
                 console.log(gameType)
+                mySafariAnswer(gameType) 
+                //startGame(gameType);
+                
                      
         })
     
@@ -28,7 +29,30 @@ document.addEventListener("DOMContentLoaded", function() {
     })}}
 */
 
+function Veryifiya(x,gameType)
+{ y=mySafariAnswer(x) 
 
+    let userAnswer = mySafariQuestions[y][gameType];
+    console.log('player answer is: ',userAnswer)
+     
+    
+    
+    
+     /** 
+    
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
+
+    if (isCorrect) {
+        alert("Hey! You got it right! :D");
+        incrementScore();
+    } else {
+        alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        incrementWrongScore();
+    }
+        
+     */
+    }
 
 let mySafariQuestions = [
     {
@@ -102,13 +126,13 @@ function myCorrectAnswer(x){
 
 }
 
-function myCorrectOptionsDisplay(x) {
+function myOptionsDisplay(x) {
 
 document.getElementById("answer-clue").innerHTML=
-`<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer1']} 
-<input type="radio" name="response" value="choose-answer" id="answer2">${mySafariQuestions[x]['Answer2']} 
-<input type="radio" name="response" value="choose-answer" id="answer3">${mySafariQuestions[x]['Answer3']} 
-<input type="radio" name="response" value="choose-answer" id="answer4">${mySafariQuestions[x]['Answer4']}`
+`<input type="radio" name="response" value="answer1" id="Answer1"><label for="answer1">${mySafariQuestions[x]['Answer1']}</label>
+<input type="radio" name="response" value="answer2" id="Answer2"><label for="answer2">${mySafariQuestions[x]['Answer2']}</label>
+<input type="radio" name="response" value="answer3" id="Answer3"><label for="answer3">${mySafariQuestions[x]['Answer3']}</label>
+<input type="radio" name="response" value="answer4" id="Answer4"><label for="answer4">${mySafariQuestions[x]['Answer4']}</label>`
 
 }
 
@@ -117,7 +141,8 @@ function replace() {
 let x = Math.abs(6 - Math.floor(Math.random() * 10));
 document.getElementsByTagName('p')[0].innerText=mySafariQuestions[x]['safariQuestion']
 document.getElementsByClassName("safari-quizAnimals")[0].innerHTML=mySafariQuestions[x]['safariQuizAnimals']
-myCorrectOptionsDisplay(x);
+myOptionsDisplay(x);
+mySafariAnswer(x)
 myCorrectAnswer(x);
 }
 
@@ -127,7 +152,7 @@ window.onload = replace();
 
 
 
-
+ 
 /**
  * A variable which consists of a list of objects with 
  * questions and answers.
