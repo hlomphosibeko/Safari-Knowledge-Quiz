@@ -1,27 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-   //let mySubmit = document.querySelectorAll('input[type]');
    let buttons = document.querySelectorAll('input[type=radio]');
     
-     /**  for (let sub of mySubmit) {
-        sub.addEventListener('click', function() {if(this.getAttribute("type") === "submit") {
-        alert("You clicked Submit!")
-     }
-     else {*/
         for (let btn of buttons) {
             btn.addEventListener('click', function() {
                 let gameType = this.id;
-               // let y = mySafariQuestions[0][gameType]
             mylist.push(gameType)
-           //console.log(mylist)
-            //console.log(mylist[0])
-            //console.log(mylist[1])
-
+    
             myUserAnswer()
-                //mySafariAnswer(gameType) 
-                myRunGame(gameType);
-                
-                    // console.log(mylist[0])
+               
         })
     
     }})
@@ -164,14 +151,8 @@ myCorrectAnswer(x);
 }
 
 
-
 window.onload = replace();
     
-
-function  startGame(gameType){
-y=myUserAnswer
-
-}
 
 
  
@@ -182,13 +163,7 @@ y=myUserAnswer
 
 
 
-function myDisplayedQuestions(safariQuestion, safariQuizAnimals) {
-    let x = Math.abs(6 - Math.floor(Math.random() * 10));
-
-    document.getElementsByClassName("safari-question").innerText = mySafariQuestions[x][safariQuestion];
-    document.getElementsByClassName("safari-quizAnimals").innerHTML = mySafariQuestions[x][safariQuizAnimals];
-}
-
+/**
 function displayBirdAnswer() {
     if (document.getElementById("answer1").checked) {
         document.getElementById("answer1").textContent = mySafariQuestions[0]['correctAnswer'];
@@ -224,7 +199,7 @@ function displayCheetahAnswer() {
 
 
 
-
+*/
 
 
 
