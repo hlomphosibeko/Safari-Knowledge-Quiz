@@ -96,11 +96,11 @@ function myCorrectAnswer(x){
 
 }
 
-function myCorrectOptions(x) {
+function myCorrectOptionsDisplay(x) {
     //console.log(document.getElementById("answer-clue").innerHTML)
   //console.log(document.getElementById("answer-clue").firstElementChild) 
-  console.log(document.getElementById("answer1").innerHTML)
-document.getElementById("answer-clue").innerHTML='<input type="radio" name="response" value="choose-answer" id="answer1">LOVE <input type="radio" name="response" value="choose-answer" id="answer1">Water <input type="radio" name="response" value="choose-answer" id="answer1">ICE <input type="radio" name="response" value="choose-answer" id="answer1">ROSES'
+  //console.log(document.getElementById("answer1").innerHTML)
+document.getElementById("answer-clue").innerHTML=`<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer1']} <input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer2']} <input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer3']} <input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer4']}`
 //<input type="radio" name="response" value="choose-answer" id="answer1">LOVE
 //'<input type="radio" name="response" value="choose-answer" id="answer1">LOVE
 //<input type="radio" name="response" value="choose-answer" id="answer1">LOVE"
@@ -116,7 +116,7 @@ let x = Math.abs(6 - Math.floor(Math.random() * 10));
 document.getElementsByTagName('p')[0].innerText=mySafariQuestions[x]['safariQuestion']
 document.getElementsByClassName("safari-quizAnimals")[0].innerHTML=mySafariQuestions[x]['safariQuizAnimals']
 myCorrectAnswer(x);
-myCorrectOptions(x);
+myCorrectOptionsDisplay(x);
 }
 
 window.onload = replace();
