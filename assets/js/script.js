@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  //  let mySubmit = document.querySelectorAll('input[type=submit]');
-    let buttons = document.querySelectorAll('input[type=radio]');
+   //let mySubmit = document.querySelectorAll('input[type]');
+   let buttons = document.querySelectorAll('input[type=radio]');
     
      /**  for (let sub of mySubmit) {
         sub.addEventListener('click', function() {if(this.getAttribute("type") === "submit") {
@@ -11,11 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let btn of buttons) {
             btn.addEventListener('click', function() {
                 let gameType = this.id;
-                console.log(gameType)
-                mySafariAnswer(gameType) 
-                //startGame(gameType);
+               // let y = mySafariQuestions[0][gameType]
+            mylist.push(gameType)
+                console.log(mylist)
+                //mySafariAnswer(gameType) 
+                myRunGame(gameType);
                 
-                     
+                    // console.log(mylist[0])
         })
     
     }})
@@ -29,11 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
     })}}
 */
 
-function Veryifiya(x,gameType)
-{ y=mySafariAnswer(x) 
+let mylist=[]
 
-    let userAnswer = mySafariQuestions[y][gameType];
-    console.log('player answer is: ',userAnswer)
+    //let userAnswer = mySafariQuestions[y][gameType];
+   // console.log('player answer is: ',userAnswer)
      
     
     
@@ -52,7 +53,7 @@ function Veryifiya(x,gameType)
     }
         
      */
-    }
+
 
 let mySafariQuestions = [
     {
@@ -120,6 +121,16 @@ let mySafariQuestions = [
     }
 ];
 
+function myRunGame(y){
+return y;
+}
+
+//function myUserAnswer(x){ 
+    
+   //console.log(mylist[0]);
+   // return mySafariQuestions[x][p];
+//}
+
 function myCorrectAnswer(x){
     //console.log(mySafariQuestions[x]['correctAnswer'])
     return mySafariQuestions[x]['correctAnswer']
@@ -129,10 +140,10 @@ function myCorrectAnswer(x){
 function myOptionsDisplay(x) {
 
 document.getElementById("answer-clue").innerHTML=
-`<input type="radio" name="response" value="answer1" id="Answer1"><label for="answer1">${mySafariQuestions[x]['Answer1']}</label>
-<input type="radio" name="response" value="answer2" id="Answer2"><label for="answer2">${mySafariQuestions[x]['Answer2']}</label>
-<input type="radio" name="response" value="answer3" id="Answer3"><label for="answer3">${mySafariQuestions[x]['Answer3']}</label>
-<input type="radio" name="response" value="answer4" id="Answer4"><label for="answer4">${mySafariQuestions[x]['Answer4']}</label>`
+`<input type="radio" name="response" value="answer1" id="Answer1">${mySafariQuestions[x]['Answer1']}
+<input type="radio" name="response" value="answer2" id="Answer2">${mySafariQuestions[x]['Answer2']}
+<input type="radio" name="response" value="answer3" id="Answer3">${mySafariQuestions[x]['Answer3']}
+<input type="radio" name="response" value="answer4" id="Answer4">${mySafariQuestions[x]['Answer4']}`
 
 }
 
@@ -142,14 +153,20 @@ let x = Math.abs(6 - Math.floor(Math.random() * 10));
 document.getElementsByTagName('p')[0].innerText=mySafariQuestions[x]['safariQuestion']
 document.getElementsByClassName("safari-quizAnimals")[0].innerHTML=mySafariQuestions[x]['safariQuizAnimals']
 myOptionsDisplay(x);
-mySafariAnswer(x)
-myCorrectAnswer(x);
+mylist.push(x);
+//myUserAnswer(x);
+
+//mySafariAnswer(x)
+//myCorrectAnswer(x);
 }
 
 window.onload = replace();
     
 
+function  startGame(gameType){
+y=myUserAnswer
 
+}
 
 
  
