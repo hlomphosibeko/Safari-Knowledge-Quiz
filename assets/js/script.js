@@ -13,7 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 let gameType = this.id;
                // let y = mySafariQuestions[0][gameType]
             mylist.push(gameType)
-                console.log(mylist)
+           //console.log(mylist)
+            //console.log(mylist[0])
+            //console.log(mylist[1])
+
+            myUserAnswer()
                 //mySafariAnswer(gameType) 
                 myRunGame(gameType);
                 
@@ -125,14 +129,10 @@ function myRunGame(y){
 return y;
 }
 
-//function myUserAnswer(x){ 
-    
-   //console.log(mylist[0]);
-   // return mySafariQuestions[x][p];
-//}
+
 
 function myCorrectAnswer(x){
-    //console.log(mySafariQuestions[x]['correctAnswer'])
+   console.log('The correct answer is :',mySafariQuestions[x]['correctAnswer'])
     return mySafariQuestions[x]['correctAnswer']
 
 }
@@ -147,6 +147,11 @@ document.getElementById("answer-clue").innerHTML=
 
 }
 
+function myUserAnswer(){ 
+    console.log(mySafariQuestions[mylist[0]][mylist[1]])
+  return mySafariQuestions[mylist[0]][mylist[1]];
+}
+
 
 function replace() {
 let x = Math.abs(6 - Math.floor(Math.random() * 10));
@@ -154,11 +159,11 @@ document.getElementsByTagName('p')[0].innerText=mySafariQuestions[x]['safariQues
 document.getElementsByClassName("safari-quizAnimals")[0].innerHTML=mySafariQuestions[x]['safariQuizAnimals']
 myOptionsDisplay(x);
 mylist.push(x);
-//myUserAnswer(x);
+myCorrectAnswer(x);
 
-//mySafariAnswer(x)
-//myCorrectAnswer(x);
 }
+
+
 
 window.onload = replace();
     
