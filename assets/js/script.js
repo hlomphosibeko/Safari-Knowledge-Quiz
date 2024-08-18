@@ -97,16 +97,12 @@ function myCorrectAnswer(x){
 }
 
 function myCorrectOptionsDisplay(x) {
-    //console.log(document.getElementById("answer-clue").innerHTML)
-  //console.log(document.getElementById("answer-clue").firstElementChild) 
-  //console.log(document.getElementById("answer1").innerHTML)
-document.getElementById("answer-clue").innerHTML=`<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer1']} <input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer2']} <input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer3']} <input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer4']}`
-//<input type="radio" name="response" value="choose-answer" id="answer1">LOVE
-//'<input type="radio" name="response" value="choose-answer" id="answer1">LOVE
-//<input type="radio" name="response" value="choose-answer" id="answer1">LOVE"
-//<input type="radio" name="response" value="choose-answer" id="answer2">mySafariQuesions[x]['Answer2']
-//<input type="radio" name="response" value="choose-answer" id="answer3">mySafariQuesions[x]['Answer3']
-//<input type="radio" name="response" value="choose-answer" id="answer4">mySafariQuesions[x]['Answer4']
+
+document.getElementById("answer-clue").innerHTML=
+`<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer1']} 
+<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer2']} 
+<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer3']} 
+<input type="radio" name="response" value="choose-answer" id="answer1">${mySafariQuestions[x]['Answer4']}`
 
 }
 
