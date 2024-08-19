@@ -48,7 +48,7 @@ let mylist=[]
 
 let mySafariQuestions = [
     {
-        safariQuestion: "What is the name of the above animal?",
+        safariQuestion: "What is the name of the below animal?",
         safariQuizAnimals: '<img src="assets/images/bird.jpg">',
         Answer1: "bird",
         Answer2: "tiger",
@@ -57,7 +57,7 @@ let mySafariQuestions = [
         correctAnswer: "bird",
     },
     {
-        safariQuestion: "Where does this animal live?",
+        safariQuestion: "Where does the below animal live?",
         safariQuizAnimals: '<img src="assets/images/cheetah.jpg">',
         Answer1: "in the ocean",
         Answer2: "at the zoo",
@@ -66,7 +66,7 @@ let mySafariQuestions = [
         correctAnswer: "at the zoo",
     },
     {
-        safariQuestion: "What color is it?",
+        safariQuestion: "What color is the below animal?",
         safariQuizAnimals: '<img src="assets/images/crocodile.jpg">',
         Answer1: "yellow",
         Answer2: "purple",
@@ -75,16 +75,16 @@ let mySafariQuestions = [
         correctAnswer: "green",
     },
     {
-        safariQuestion: "How many legs does it have?",
+        safariQuestion: "How many legs does this animal have?",
         safariQuizAnimals: '<img src="assets/images/fish.jpg">',
-        Answer1: "2",
-        Answer2: "4",
-        Answer3: "8",
-        Answer4: "0",
-        correctAnswer: "0",
+        Answer1: "2 legs",
+        Answer2: "4 legs",
+        Answer3: "8 legs",
+        Answer4: "no legs",
+        correctAnswer: "no legs",
     },
     {
-        safariQuestion: "Does it lay eggs?",
+        safariQuestion: "Does this animal lay eggs?",
         safariQuizAnimals: '<img src="assets/images/frog.jpg">',
         Answer1: "no",
         Answer2: "only in summer",
@@ -102,13 +102,13 @@ let mySafariQuestions = [
         correctAnswer: "it is slow",
     },
     {
-        safariQuestion: "How does it move?",
+        safariQuestion: "How does this animal move?",
         safariQuizAnimals: '<img src="assets/images/zebra.jpg">',
-        Answer1: "walk",
-        Answer2: "hops",
-        Answer3: "swim",
-        Answer4: "crawl",
-        correctAnswer: "walk",
+        Answer1: " it walks",
+        Answer2: "it hops",
+        Answer3: "it swims",
+        Answer4: "it crawls",
+        correctAnswer: "it walks",
     }
 ];
 
