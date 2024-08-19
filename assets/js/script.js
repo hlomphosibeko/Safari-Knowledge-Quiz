@@ -117,6 +117,16 @@ return y;
 }
 
 
+function incrementScore() {
+    let safariPoints = parseInt(document.getElementById("correct").innerHTML);
+    document.getElementById("correct").innerHTML = ++safariPoints;
+}
+
+function incrementWrongScore() {
+    let safariPoints = parseInt(document.getElementById("wrong").innerHTML);
+    document.getElementById("wrong").innerHTML = ++safariPoints;
+}
+
 
 function myCorrectAnswer(x){
    console.log('The correct answer is :',mySafariQuestions[x]['correctAnswer'])

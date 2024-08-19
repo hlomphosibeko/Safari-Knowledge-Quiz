@@ -111,22 +111,18 @@ h1 {
 }
 
 #correct {
-    background-color: green;
-    color: black;
+    color: green;
     font-weight: bold;
     font: 1.5em;
 }
 
 #wrong {
-    background-color: red;
-    color: black;
+    color: red;
     font-weight: bold;
     font: 1.5em;
 }
 
-.hide {
-    display: none;
-}
+
 .safari-points {
     display: flex;
     margin-left: 20px;
