@@ -13,6 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     }})
 
+    
+
   /**  for (let sub of mySubmit) {
         sub.addEventListener('click', function() {
                 if(this.getAttribute("type") === "submit") {
@@ -116,6 +118,22 @@ function myRunGame(y){
 return y;
 }
 
+function checkAnswer() {
+    let playerAnswer = document.getElementById("answer-clue").innerHTML;
+    let correctAnswer = mySafariQuestions[x]['correctAnswer'];
+    let isCorrect = playerAnswer === correctAnswer;
+
+    if(isCorrect) {
+        alert('Well done, you really know your animal!')
+        incrementScore();
+    } else {
+        alert(`Oops, you chose the wrong answer! 
+            The correct answer is ${mySafariQuestions[x]['correctAnswer']}.`)
+        incrementWrongScore();
+    }
+    
+    
+}
 
 function incrementScore() {
     let safariPoints = parseInt(document.getElementById("correct").innerHTML);
