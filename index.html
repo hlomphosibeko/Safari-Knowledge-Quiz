@@ -34,11 +34,12 @@
                 <p>What is the name of the below animal?</p>
             </div>  
             <div class="safari-quizAnimals">
-                <img src="assets/images/frog.jpg">
+                <img src="assets/images/bird.jpg">
             </div>     
         </div>
+    </div>     
         <!-- Answer Section-->
-        <form id="answer-clue">
+    <form id="answer-clue">
             <label for="answer1">bird</label>
             <input type="radio" name="response" value="answer1" id="answer1">
 
@@ -50,13 +51,17 @@
 
             <label for="answer4">fish</label>
             <input type="radio" name="response" value="answer4" id="answer4">
- 
-        </form>
-        <!-- Scoring -->
-        <button class="btn" type="submit" id="">Submit Answer</button>
-        <div  class="points">Correct Answers <span id="correct">0</span></div>
-        <div  class="points">Wrong Answers <span id="wrong">0</span></div>
-    </div>   
+    </form>
+        
+    <!-- Scoring -->
+    <button class="btn" type="submit" id="">Submit Answer</button>
+        
+    <div class="points"> Correct Answers <span id="correct"> 0 </span></div>
+    <div class="points"> Wrong Answers <span id="wrong"> 0 </span></div>
+    <div>
+        <button class="hide" id="start-btn"> Start Game </button>
+        <button class="hide" id="reload-btn"> Reload Game</button>
+    </div> 
 
     <script src="assets/js/script.js"></script>
 </body>

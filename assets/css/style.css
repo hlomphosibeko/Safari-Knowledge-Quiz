@@ -58,14 +58,16 @@ h1 {
 
 .username {
     font-weight: bold;
+    padding-top: 10%;
 }
 
 #question-container {
-    margin: 5%;
+    margin: 5% 10%;
     border-style: ridge;
     border-color: #d2691e;
     box-shadow: 0 0 10px 2px;
-    height: 50vh;
+    width: 85%;
+    height: 40vh;
 }
 
 .safari-question {
@@ -78,8 +80,11 @@ h1 {
 }
 
 .safari-quizAnimals {
-    justify-items: center;
     padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 
 #answer-clue {
@@ -104,10 +109,12 @@ h1 {
     width: 30%;
     border-radius: 15px;
     font-weight: bold;
+    margin-top: 5%;
 }
 .btn:hover {
     background-color: white;
     color: #d2691e;
+    cursor: pointer;
 }
 
 #correct {
@@ -122,11 +129,35 @@ h1 {
     font: 1.5em;
 }
 
-
-.safari-points {
-    display: flex;
-    margin-left: 20px;
-    font-size: medium;
-    letter-spacing: 5px;
+#start-btn {
+    background-color: white;
+    color: #d2691e;
+    border-radius: 15px;
+    width: 30%;
+    margin: 10px 50px 0 5px;
+    font-family: inherit;
     font-weight: bold;
 }
+
+#start-btn:hover {
+    cursor: pointer;
+    background-color: #d2691e;
+    color: white;
+}
+#reload-btn {
+    background-color: #d2691e;
+    color: white;
+    border-radius: 15px;
+    width: 30%;
+    margin: 10px 5px 0 50px;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#reload-btn:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #d2691e;    
+}
+
+
