@@ -145,8 +145,8 @@ h1 {
     color: white;
 }
 #reload-btn {
-    background-color: #d2691e;
-    color: white;
+    background-color: greenyellow;
+    color: #d2691e;
     border-radius: 15px;
     width: 30%;
     margin: 10px 5px 0 50px;
@@ -156,8 +156,9 @@ h1 {
 
 #reload-btn:hover {
     cursor: pointer;
-    background-color: white;
-    color: #d2691e;    
+    background-color: #d2691e;
+    color: white ;    
 }
+
 
 

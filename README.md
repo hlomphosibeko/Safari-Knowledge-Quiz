@@ -35,6 +35,9 @@ Animals can entertain people in so many ways. We got the zoo to see them, we rea
 ### Features Left to implement
 * Add more questions and images to the game.
 
+## Testing
+
+
 
 ## Deployment
 * This site was deployed to GitHub pages. The steps are as follows:

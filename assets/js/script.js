@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
             let gameType = this.id;
             mylist.push(gameType)
             myCheckAnswer();
-            myUserAnswer();
-            
-          
+           // myUserAnswer();
+           mylist=[];
+           ;
+           replace();
         })
 
     }
+    
 })
 
 
@@ -116,15 +118,15 @@ let mySafariQuestions = [
     }
 ];
 
-function myRunGame(y) {
-    return y;
-}
+//function myRunGame(y) {
+    //return y;
+//}
 
 /**function checkAnswer() {
     let playerAnswer = document.getElementById("answer-clue").innerHTML;
     let correctAnswer = myCorrectAnswer();
     let isCorrect = playerAnswer === correctAnswer;
-
+//
     if (isCorrect) {
         alert('Well done, you really know your animal!')
         incrementScore();
@@ -150,7 +152,7 @@ function incrementWrongScore() {
 
 function myCorrectAnswer(x) {
     //console.log(x, mySafariQuestions)
-    //console.log('The correct answer is :', mySafariQuestions[x]['correctAnswer'])
+   console.log('The correct answer is :', mySafariQuestions[x]['correctAnswer'])
     return mySafariQuestions[x]['correctAnswer']
 
 }
@@ -174,17 +176,22 @@ let correctCounter = 0
 let wrongCounter = 0
 
 function replace() {
+console.log('my list size is',mylist.length)
+console.log('The first Element in the list is',mylist[0])
+
+   
     let x = Math.abs(6 - Math.floor(Math.random() * 10));
     document.getElementsByTagName('p')[0].innerText = mySafariQuestions[x]['safariQuestion']
     document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']
     myOptionsDisplay(x);
     mylist.push(x);
     myCorrectAnswer(x);
-    console.log('The correct answer is ', myCorrectAnswer(x))
-   
-   
-    
+    //console.log('The correct answer is ', myCorrectAnswer(x))    
 }
+
+//function myStartGame() {
+   
+//}
 
 function myCorrectIncrement() {
     
@@ -205,13 +212,14 @@ function myCheckAnswer() {
 if (t===q) {
  console.log("Well done, you know your animals!")
  document.getElementById("correct").innerHTML=myCorrectIncrement()
-      return true;
+      return ;
 } else {
      console.log("Oops! That is not the right answer." )
      document.getElementById("wrong").innerHTML=myWrongIncrement()
     
-     return false;
+     return ;
 }
+
 }
 
 
