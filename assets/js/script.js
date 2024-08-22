@@ -19,100 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
-
-    
    startGame('Answer1');
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**document.addEventListener("DOMContentLoaded", function () {
-
-    let buttons = document.querySelectorAll('input[type=radio]');
-
-    for (let btn of buttons) {
-        btn.addEventListener('click', function () {
-           // if(this.getAttribute("type"==="submit")){
-
-           //     myCheckAnswer();}
-           // else {
-            let gameType = this.id;
-            mylist.push(gameType);
-            myCheckAnswer();
-               
-            }
-        )
-          
-        }
-        
-          }
-          
-        )
-
-
-       
-
-/**  for (let sub of mySubmit) {
-      sub.addEventListener('click', function() {
-              if(this.getAttribute("type") === "submit") {
-                  alert("You clicked Submit!")
-               }
-  
-  })}}
-*/
-
 let mylist = []
-
-//let userAnswer = mySafariQuestions[y][gameType];
-// console.log('player answer is: ',userAnswer)
-
-
-
-
-/** 
- 
-let calculatedAnswer = calculateCorrectAnswer();
-let isCorrect = userAnswer === calculatedAnswer[0];
-
-if (isCorrect) {
-   alert("Hey! You got it right! :D");
-   incrementScore();
-} else {
-   alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
-   incrementWrongScore();
-}
-   
-*/
 
 
 let mySafariQuestions = [
@@ -181,40 +91,10 @@ let mySafariQuestions = [
     }
 ];
 
-//function myRunGame(y) {
-    //return y;
-//}
-
-/**function checkAnswer() {
-    let playerAnswer = document.getElementById("answer-clue").innerHTML;
-    let correctAnswer = myCorrectAnswer();
-    let isCorrect = playerAnswer === correctAnswer;
-//
-    if (isCorrect) {
-        alert('Well done, you really know your animal!')
-        incrementScore();
-    } else {
-        alert(`Oops, you chose the wrong answer! 
-            The correct answer is ${mySafariQuestions[x]['correctAnswer']}.`)
-        incrementWrongScore();
-    }
-
-
-}*/
-
-/**function incrementScore() {
-    let safariPoints = parseInt(document.getElementById("correct").innerHTML);
-    document.getElementById("correct").innerHTML = ++safariPoints;
-}
-
-function incrementWrongScore() {
-    let safariPoints = parseInt(document.getElementById("wrong").innerHTML);
-    document.getElementById("wrong").innerHTML = ++safariPoints;
-}*/
 
 
 function myCorrectAnswer(x) {
-    //console.log(x, mySafariQuestions)
+
    alert('The correct answer is :', mySafariQuestions[x]['correctAnswer'])
     return mySafariQuestions[x]['correctAnswer']
 
@@ -251,8 +131,6 @@ let wrongCounter = 0
 
 
 function startGame(gameType) {
-    alert('my list size is',mylist.length)
-    alert('The first Element in the list is',mylist[0])
 
     //gameOver();
 
@@ -261,27 +139,17 @@ function startGame(gameType) {
     document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']
     myOptionsDisplay(x,gameType);
     mylist.push(x);
-    alert('The first Element in the list is',mylist[0])
-    //myCorrectAnswer(x);
-    //console.log('The correct answer is ', myCorrectAnswer(x))   
+   
    
 }
 
-//window.onload = startGame();
-
-
-//function myStartGame() {
-   
-//}
-
 function myCorrectIncrement() {
     
-   // console.log("The correct increment is", ++correctCounter);
     return ++correctCounter;
 }
 
 function myWrongIncrement() {
-    //console.log("The wrong increment is", ++wrongCounter)
+    
     return ++wrongCounter
 
 }
@@ -290,106 +158,16 @@ function myCheckAnswer() {
 
     let t =myUserAnswer()
     let q =myCorrectAnswer(mylist[0])
-if (t===q) {
+    if (t===q) {
  alert("Well done, you know your animals!")
  document.getElementById("correct").innerHTML=myCorrectIncrement()
-} else {
+    } else {
      alert("Oops! That is not the right answer." )
      document.getElementById("wrong").innerHTML=myWrongIncrement()
      
              
-}
+    }
     mylist=[];
    startGame();
 
 }
-
-
-
-
-
-
-/**
- * A variable which consists of a list of objects with 
- * questions and answers.
- */
-
-
-
-/**
-function displayBirdAnswer() {
-    if (document.getElementById("answer1").checked) {
-        document.getElementById("answer1").textContent = mySafariQuestions[0]['correctAnswer'];
-    } else if (document.getElementById("answer2").checked) {
-            alert(`You selected ${document.getElementById("answer2")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
-        } else if (document.getElementById("answer3").checked) {
-            alert(`You selected ${document.getElementById("answer3")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
-        } else if (document.getElementById("answer4").checked) {
-            alert(`You selected ${document.getElementById("answer4")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`) 
-        } else {throw `You selected ${document.getElementById("answer4")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`}      
-}
-
-function displayCheetahAnswer() {
-    if (document.getElementById("answer1").checked) {
-        alert(`You selected ${document.getElementById("answer1")
-        .textContent} which is incorrect. The correct answer is ${document.getElementById("answer2")}`)
-    } else if (document.getElementById("answer2").checked) {
-        document.getElementById("answer2").textContent = mySafariQuestions[0]['correctAnswer']; 
-        } else if (document.getElementById("answer3").checked) {
-            alert(`You selected ${document.getElementById("answer3")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`)
-        } else if (document.getElementById("answer4").checked) {
-            alert(`You selected ${document.getElementById("answer4")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`) 
-        } else {
-            throw `You selected ${document.getElementById("answer4")
-            .textContent} which is incorrect. The correct answer is ${document.getElementById("answer1")}`}
-}
-
-
-
-*/
-
-
-
-
-
-
-
-
-/**function myFunction(event) {
-    console.log('You clicked the button!');
-   
-    }
-
-let myButton = document.getElementsByClassName("btn");
-myButton.addEventListener('click', myFunction);
-
-**/
-/**
-document.addEventListener("DOMContentLoaded", function() {
-    let button = document.getElementsByClassName('btn');
-
-    for (let btn of button) {
-        btn.addEventListener('click', function() {
-            if(this.getAttribute("type") === "submit") {
-               alert("You clicked Submit!")
-            } else {
-                let gameType = this.getAttribute("type");
-                startGame(gameType);
-            }
-        })
-    }
-
-    startGame("mySafariQuesions");
-})
-
-function startGame(gameType) {
-
-}
-
- */
