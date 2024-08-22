@@ -4,20 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let btn of buttons) {
         btn.addEventListener('click', function () {
+           // if(this.getAttribute("type"==="submit")){
+
+           //     myCheckAnswer();}
+           // else {
             let gameType = this.id;
-            mylist.push(gameType)
+            mylist.push(gameType);
             myCheckAnswer();
-           // myUserAnswer();
-           mylist=[];
-           ;
-           replace();
-        })
+               
+            }
+        )
+          
+        }
+        
+          }
+          
+        )
 
-    }
-    
-})
 
-
+       
 
 /**  for (let sub of mySubmit) {
       sub.addEventListener('click', function() {
@@ -185,9 +190,14 @@ console.log('The first Element in the list is',mylist[0])
     document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']
     myOptionsDisplay(x);
     mylist.push(x);
-    myCorrectAnswer(x);
-    //console.log('The correct answer is ', myCorrectAnswer(x))    
+    console.log('The first Element in the list is',mylist[0])
+    //myCorrectAnswer(x);
+    //console.log('The correct answer is ', myCorrectAnswer(x))   
+   
 }
+
+window.onload = replace();
+
 
 //function myStartGame() {
    
@@ -212,18 +222,19 @@ function myCheckAnswer() {
 if (t===q) {
  console.log("Well done, you know your animals!")
  document.getElementById("correct").innerHTML=myCorrectIncrement()
-      return ;
 } else {
      console.log("Oops! That is not the right answer." )
      document.getElementById("wrong").innerHTML=myWrongIncrement()
-    
-     return ;
-}
+     mylist=[];
+             replace();  
 
 }
+   // replace();
+
+}
 
 
-window.onload = replace();
+
 
 
 

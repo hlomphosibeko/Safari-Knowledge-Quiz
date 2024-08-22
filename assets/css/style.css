@@ -129,21 +129,19 @@ h1 {
     font: 1.5em;
 }
 
-#start-btn {
-    background-color: white;
-    color: #d2691e;
-    border-radius: 15px;
-    width: 30%;
-    margin: 10px 50px 0 5px;
-    font-family: inherit;
-    font-weight: bold;
+#hide-gameover {
+    background-color: black;
+    display: none;
 }
 
-#start-btn:hover {
-    cursor: pointer;
-    background-color: #d2691e;
+.over {
+    color: red;
+}
+
+.gameover-message {
     color: white;
 }
+
 #reload-btn {
     background-color: greenyellow;
     color: #d2691e;

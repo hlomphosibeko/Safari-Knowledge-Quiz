@@ -50,6 +50,11 @@ Animals can entertain people in so many ways. We got the zoo to see them, we rea
 
 The live link can be found here - https://hlomphosibeko.github.io/Safari-Knowledge-Quiz/
 
+## Credits
+### Content
+* The JS code used to group the questions, quesion images and answers is taken from [YouTube](https://www.youtube.com/channel/UCEsOe19aGFcM31zLG2M2sXw)
+
+
 ### Media
 * The images used on this game are taken from [Freepik](https://www.freepik.com/free-photos-vectors/safari-animals/)
 * The thumb emoji used at the top of the game is taken from [Emojipedia](https://emojipeadia.org/thums-up)
