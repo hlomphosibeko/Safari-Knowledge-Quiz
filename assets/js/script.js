@@ -1,4 +1,62 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
+    let radios = document.querySelectorAll("input[type=radio]");
+       
+    for (let btn of radios) {
+        btn.addEventListener("click", function() {
+                let gameType = this.id;
+                startGame(gameType);
+            })
+
+        }
+
+    let buttons = document.getElementsByTagName("button"); 
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("type") === "submit") {
+                myCheckAnswer();
+            } 
+        })
+    }
+
+
+    
+   startGame('Answer1');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**document.addEventListener("DOMContentLoaded", function () {
 
     let buttons = document.querySelectorAll('input[type=radio]');
 
@@ -157,46 +215,59 @@ function incrementWrongScore() {
 
 function myCorrectAnswer(x) {
     //console.log(x, mySafariQuestions)
-   console.log('The correct answer is :', mySafariQuestions[x]['correctAnswer'])
+   alert('The correct answer is :', mySafariQuestions[x]['correctAnswer'])
     return mySafariQuestions[x]['correctAnswer']
 
 }
 
-function myOptionsDisplay(x) {
+function myOptionsDisplay(x,gameType) {
 
     document.getElementById("answer-clue").innerHTML =
-    `<input type="radio" name="response" value="answer1" id="Answer1">${mySafariQuestions[x]['Answer1']}
-    <input type="radio" name="response" value="answer2" id="Answer2">${mySafariQuestions[x]['Answer2']}
-    <input type="radio" name="response" value="answer3" id="Answer3">${mySafariQuestions[x]['Answer3']}
-    <input type="radio" name="response" value="answer4" id="Answer4">${mySafariQuestions[x]['Answer4']}`
+    `<input type="radio" name="response" value="answer1" id="Answer1">${mySafariQuestions[x][gameType]}
+    <input type="radio" name="response" value="answer2" id="Answer2">${mySafariQuestions[x][gameType]}
+    <input type="radio" name="response" value="answer3" id="Answer3">${mySafariQuestions[x][gameType]}
+    <input type="radio" name="response" value="answer4" id="Answer4">${mySafariQuestions[x][gameType]}`
 
 }
 
 function myUserAnswer() {
-   console.log('The user answer is', mySafariQuestions[mylist[0]][mylist[1]])
+   alert('The user answer is', mySafariQuestions[mylist[0]][mylist[1]])
     return mySafariQuestions[mylist[0]][mylist[1]];
 }
 
 let correctCounter = 0
 let wrongCounter = 0
 
-function replace() {
-console.log('my list size is',mylist.length)
-console.log('The first Element in the list is',mylist[0])
+/**function gameOver() {
 
-   
+    let i = myWrongIncrement();
+
+    for ( let i = 0; i = 2; i++) {
+        document.getElementById("hide-gameover").= ""
+    }
+    
+    
+    }*/
+
+
+function startGame(gameType) {
+    alert('my list size is',mylist.length)
+    alert('The first Element in the list is',mylist[0])
+
+    //gameOver();
+
     let x = Math.abs(6 - Math.floor(Math.random() * 10));
     document.getElementsByTagName('p')[0].innerText = mySafariQuestions[x]['safariQuestion']
     document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']
-    myOptionsDisplay(x);
+    myOptionsDisplay(x,gameType);
     mylist.push(x);
-    console.log('The first Element in the list is',mylist[0])
+    alert('The first Element in the list is',mylist[0])
     //myCorrectAnswer(x);
     //console.log('The correct answer is ', myCorrectAnswer(x))   
    
 }
 
-window.onload = replace();
+//window.onload = startGame();
 
 
 //function myStartGame() {
@@ -220,16 +291,16 @@ function myCheckAnswer() {
     let t =myUserAnswer()
     let q =myCorrectAnswer(mylist[0])
 if (t===q) {
- console.log("Well done, you know your animals!")
+ alert("Well done, you know your animals!")
  document.getElementById("correct").innerHTML=myCorrectIncrement()
 } else {
-     console.log("Oops! That is not the right answer." )
+     alert("Oops! That is not the right answer." )
      document.getElementById("wrong").innerHTML=myWrongIncrement()
-     mylist=[];
-             replace();  
-
+     
+             
 }
-   // replace();
+    mylist=[];
+   startGame();
 
 }
 

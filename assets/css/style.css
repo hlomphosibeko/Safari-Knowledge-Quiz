@@ -131,7 +131,7 @@ h1 {
 
 #hide-gameover {
     background-color: black;
-    /*display: none;*/
+    display: none;
     margin: 5% 10%;
     border-style: ridge;
     border-color: #d2691e;
