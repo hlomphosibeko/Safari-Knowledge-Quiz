@@ -131,15 +131,24 @@ h1 {
 
 #hide-gameover {
     background-color: black;
-    display: none;
+    /*display: none;*/
+    margin: 5% 10%;
+    border-style: ridge;
+    border-color: #d2691e;
+    box-shadow: 0 0 10px 2px;
+    width: 85%;
+    height: 40vh;
+    padding: 25%;
 }
 
 .over {
     color: red;
+    
 }
 
 .gameover-message {
     color: white;
+    padding: 10%;
 }
 
 #reload-btn {
