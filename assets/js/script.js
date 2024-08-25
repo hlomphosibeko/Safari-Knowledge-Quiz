@@ -1,31 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-
+    
     let radios = document.querySelectorAll("input[type=radio]");
 
-    
+    //let buttons = document.getElementsByTagName("button");
 
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                myCheckAnswer();
-            }
+   // for (let button of buttons) {
+     //   button.addEventListener("click", function() {
+      //      if (this.getAttribute("data-type") === "submit") {
+       //         myCheckAnswer();
+          //  console.log("Are we on")
         {for (let btn of radios) {
             btn.addEventListener("click", function() {
-               
-                    let gameType = this.getAttribute("data-type");
-                    startGame(gameType);
+                    let valueKey = this.getAttribute('value');
+                    let gameType=mySafariQuestions[mylist[0]]['Species']
+                    console.log('The game type is',gameType);
+
+                    console.log(`Users choice is',${mySafariQuestions[mylist[0]][valueKey]}`);
+                    userchoice=mySafariQuestions[mylist[0]][valueKey];
+                    myCheckAnswer(gameType,userchoice)
+                    
+                    //myOptionsDisplay()
+                    //startGame(gameType);
+                   //myCheckAnswer(gameType)
+
                 
             })
-        }}
-        })
-        }
+        }}}
+     //   })
+     //   }
 
-    startGame("frog")
-})
+    //startGame("frog")
+)
 
-
+mylist=[]
 
 let mySafariQuestions = [{
         safariQuestion: "What is the name of the below animal?",
@@ -105,31 +112,46 @@ function myCorrectAnswer(animal) {
 
 
     for (let obtj of mySafariQuestions) {
-       if(obtj['speicies']===animal){
+       if(obtj['Species']===animal){
         return obtj['correctAnswer']
        }
         }
 }
 
 function myOptionsDisplay(x) {
- // let x = Math.abs(6 - Math.floor(Math.random() * 10));
+  //let x = Math.abs(6 - Math.floor(Math.random() * 10));
     document.getElementById("answer-clue").innerHTML =
     `<input type="radio" name="response" value="Answer1" id="Answer1">${mySafariQuestions[x]['Answer1']}
     <input type="radio" name="response" value="Answer2" id="Answer2">${mySafariQuestions[x]['Answer2']}
     <input type="radio" name="response" value="Answer3" id="Answer3">${mySafariQuestions[x]['Answer3']}
     <input type="radio" name="response" value="Answer4" id="Answer4">${mySafariQuestions[x]['Answer4']}`
 
+//' document.getElementsByTagName('p')[0].innerText = mySafariQuestions[x]////['safariQuestion']
+  //  document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']'
+//console.log('executed')
 }
+
+function startGame() {
+    //console.log(gameType)
+    //gameOver();
+    let x = Math.abs(6 - Math.floor(Math.random() * 10));
+    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[x]['safariQuestion']
+    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']
+    myOptionsDisplay(x);
+    mylist.push(x);
+    console.log('we are playing the object number',mylist[0])
+}
+onload=startGame()
 
 function myUserAnswer() { 
     
-     var radioCollection =document.getElementById('answer-clue');
+     var radioCollection =document.getElementsByName('response');
 
     for(i=0;i<radioCollection.length;i++){
 
         if(radioCollection[i].checked){
-            console.log(radioCollection[i].value,radioCollection[i].data-type);
-            return [radioCollection[i].value,radioCollection[i].data-type]
+            console.log('user checked',radioCollection[i].value);
+            return radioCollection[i].value
         }
     }
 }
@@ -153,7 +175,7 @@ function gameOver() {
     
     } */
 
-
+/** 
 function startGame(gameType) {
    
     //gameOver();
@@ -192,7 +214,7 @@ if(gameType==="bird"){
     throw `Unknown game type: ${gameType}.Aborting!`;
 }
 }
-
+*/
 
 function myCorrectIncrement() {
     
@@ -205,20 +227,16 @@ function myWrongIncrement() {
 
 }
 
-function myCheckAnswer() {
-    let userAnswer = myUserAnswer()
-    console.log('The user answer is',userAnswer)
-    
-    let calculatedAnswer =myCorrectAnswer(userAnswer[1])
-    console.log('But the correct answer is',calculatedAnswer)
+function myCheckAnswer(gt,uc) {
+   
+    let calculatedAnswer=myCorrectAnswer(gt)
 
-
-    if (userAnswer===calculatedAnswer) {
+    if (gt===uc) {
     alert("Well done, you know your animals!")
     document.getElementById("correct").innerHTML=myCorrectIncrement()
     } 
     else {
-     alert(`Oops! You chose ${userAnswer} which is not correct, the correct answer is${calculatedAnswer}`)
+     alert(`Oops! You chose ${uc} which is not correct, the correct answer is ${calculatedAnswer}`)
      document.getElementById("wrong").innerHTML=myWrongIncrement()
     }
  //  console.log(calculatedAnswer[1])
