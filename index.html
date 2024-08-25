@@ -40,27 +40,31 @@
     </div>     
         <!-- Answer Section-->
     <form id="answer-clue">
-            <label for="answer1">bird</label>
-            <input type="radio" name="response" value="answer1" id="answer1">
+          <!--  <button data-type="bird"></button>
+            <button data-type="tiger"></button>
+            <button data-type="frog"></button>
+            <button data-type="fish"></button>-->
+            <!--<label for="answer1"></label>-->
+            <input type="radio" name="response" value="bird" id="answer1" data-type="bird">bird
 
-            <label for="answer2">tiger</label>
-            <input type="radio" name="response" value="answer2" id="answer2">
+           <!-- <label for="answer2"></label>-->
+            <input type="radio" name="response" value="tiger" id="answer2" data-type="tiger">tiger
 
-            <label for="answer3">frog</label>
-            <input type="radio" name="response" value="answer3" id="answer3">
+            <!--<label for="answer3"></label>-->
+            <input type="radio" name="response" value="frog" id="answer3" data-type="frog">frog
 
-            <label for="answer4">fish</label>
-            <input type="radio" name="response" value="answer4" id="answer4">
+            <!--<label for="answer4"></label>-->
+            <input type="radio" name="response" value="fish" id="answer4" data-type="fish">fish
     </form>
         
     <!-- Scoring -->
-    <button class="btn" type="submit" id="">Submit Answer</button>
+    <button class="btn" data-type="submit">Submit Answer</button>
         
     <div class="points"> Correct Answers <span id="correct"> 0 </span></div>
     <div class="points"> Wrong Answers <span id="wrong"> 0 </span></div>
 
      <!-- Your game over screen -->   
-     <div id="hide-gameover">
+     <div id="gameover">
         <h3 class="over">GAME OVER!</h3>
 
         <p class="gameover-message">Your have 2 wrongs. Your game is over. To play again, click the reload button below!</p>

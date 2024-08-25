@@ -129,16 +129,15 @@ h1 {
     font: 1.5em;
 }
 
-#hide-gameover {
-    background-color: black;
-    display: none;
-    margin: 5% 10%;
-    border-style: ridge;
-    border-color: #d2691e;
-    box-shadow: 0 0 10px 2px;
-    width: 85%;
-    height: 40vh;
-    padding: 25%;
+#gameover {
+    opacity: 0%;
+    position: absolute;
+    margin: 190px 0 0 20px;
+    font: 18px;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    transition-duration: 0.3s;
 }
 
 .over {
