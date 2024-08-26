@@ -1,247 +1,146 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let currentQuestionIndex = 0;
+    let correctCounter = 0;
+    let wrongCounter = 0;
+
     
-    let radios = document.querySelectorAll("input[type=radio]");
 
-    //let buttons = document.getElementsByTagName("button");
-
-   // for (let button of buttons) {
-     //   button.addEventListener("click", function() {
-      //      if (this.getAttribute("data-type") === "submit") {
-       //         myCheckAnswer();
-          //  console.log("Are we on")
-        {for (let btn of radios) {
-            btn.addEventListener("click", function() {
-                    let valueKey = this.getAttribute('value');
-                    let gameType=mySafariQuestions[mylist[0]]['Species']
-                    console.log('The game type is',gameType);
-
-                    console.log(`Users choice is',${mySafariQuestions[mylist[0]][valueKey]}`);
-                    userchoice=mySafariQuestions[mylist[0]][valueKey];
-                    myCheckAnswer(gameType,userchoice)
-                    
-                    //myOptionsDisplay()
-                    //startGame(gameType);
-                   //myCheckAnswer(gameType)
-
-                
-            })
-        }}}
-     //   })
-     //   }
-
-    //startGame("frog")
-)
-
-mylist=[]
-
-let mySafariQuestions = [{
-        safariQuestion: "What is the name of the below animal?",
-        safariQuizAnimals: '<img src="assets/images/bird.jpg">',
-        Answer1: "bird",
-        Answer2: "tiger",
-        Answer3: "frog",
-        Answer4: "fish",
-        correctAnswer: "bird",
-        Species:"bird",
-    },
-    {
-        safariQuestion: "Where does the below animal live?",
-        safariQuizAnimals: '<img src="assets/images/cheetah.jpg">',
-        Answer1: "in the ocean",
-        Answer2: "at the zoo",
-        Answer3: "space",
-        Answer4: "in a house",
-        correctAnswer: "at the zoo",
-        Species:"cheetah",
-    },
-    {
-        safariQuestion: "What color is the below animal?",
-        safariQuizAnimals: '<img src="assets/images/crocodile.jpg">',
-        Answer1: "yellow",
-        Answer2: "purple",
-        Answer3: "brown",
-        Answer4: "green",
-        correctAnswer: "green",
-        Species:"crocodile",
-    },
-    {
-        safariQuestion: "How many legs does this animal have?",
-        safariQuizAnimals: '<img src="assets/images/fish.jpg">',
-        Answer1: "2 legs",
-        Answer2: "4 legs",
-        Answer3: "8 legs",
-        Answer4: "no legs",
-        correctAnswer: "no legs",
-        Species:"fish",
-    },
-    {
-        safariQuestion: "Does this animal lay eggs?",
-        safariQuizAnimals: '<img src="assets/images/frog.jpg">',
-        Answer1: "no",
-        Answer2: "only in summer",
-        Answer3: "no idea",
-        Answer4: "yes",
-        correctAnswer: "yes",
-        Species:"frog",
-    },
-    {
-        safariQuestion: "Is this animal fast or slow?",
-        safariQuizAnimals: '<img src="assets/images/tortoise.jpg">',
-        Answer1: "it is slow",
-        Answer2: "it is fast",
-        Answer3: "it can't move",
-        Answer4: "it is fast only when it is hungry",
-        correctAnswer: "it is slow",
-        Species:"tortoise",
-    },
-    {
-        safariQuestion: "How does this animal move?",
-        safariQuizAnimals: '<img src="assets/images/tiger.jpg">',
-        Answer1: " it walks",
-        Answer2: "it hops",
-        Answer3: "it swims",
-        Answer4: "it crawls",
-        correctAnswer: "it walks",
-        Species:"tiger",
+    function startGame() {
+        if (currentQuestionIndex < mySafariQuestions.length) {
+            const currentQuestion = mySafariQuestions[currentQuestionIndex];
+            document.querySelector('.safari-question p').textContent = currentQuestion.safariQuestion;
+            document.querySelector('.safari-quizAnimals').innerHTML = currentQuestion.safariQuizAnimals;
+            updateAnswerOptions(currentQuestion);
+        } else {
+            endGame();
+        }
     }
+
+    function updateAnswerOptions(question) {
+        const answerClue = document.getElementById('answer-clue');
+        answerClue.innerHTML = '';
+        for (let i = 1; i <= 4; i++) {
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 'response';
+            input.value = `Answer${i}`;
+            input.id = `answer${i}`;
+            input.dataset.type = question[`Answer${i}`];
+
+            const label = document.createElement('label');
+            label.htmlFor = `answer${i}`;
+            label.textContent = question[`Answer${i}`];
+
+            answerClue.appendChild(input);
+            answerClue.appendChild(label);
+        }
+    }
+
+    document.getElementById('answer-clue').addEventListener('change', function(event) {
+        if (event.target.type === 'radio') {
+            const userChoice = event.target.dataset.type;
+            const correctAnswer = mySafariQuestions[currentQuestionIndex].correctAnswer;
+            checkAnswer(userChoice, correctAnswer);
+        }
+    });
+
+    function checkAnswer(userChoice, correctAnswer) {
+        if (userChoice === correctAnswer) {
+            alert("Well done, you know your animals!");
+            document.getElementById("correct").textContent = ++correctCounter;
+        } else {
+            alert(`Oops! You chose ${userChoice} which is not correct, the correct answer is ${correctAnswer}`);
+            document.getElementById("wrong").textContent = ++wrongCounter;
+        }
+
+        currentQuestionIndex++;
+        startGame();
+    }
+
+    function endGame() {
+        document.getElementById('question-container').style.display = 'none';
+        document.getElementById('answer-clue').style.display = 'none';
+        document.getElementById('gameover').style.display = 'block';
+        document.getElementById('reload-btn').style.display = 'block';
+        document.querySelector('.gameover-message').textContent = `You got ${correctCounter} correct and ${wrongCounter} wrong.`;
+    }
+
+    document.getElementById('reload-btn').addEventListener('click', function() {
+        location.reload();
+    });
+
+    startGame();
+});
+
+
+const  mySafariQuestions = [{
+    safariQuestion: "What is the name of the below animal?",
+    safariQuizAnimals: '<img src="assets/images/bird.jpg">',
+    Answer1: "bird",
+    Answer2: "tiger",
+    Answer3: "frog",
+    Answer4: "fish",
+    correctAnswer: "bird",
+    Species:"bird",
+},
+{
+    safariQuestion: "Where does the below animal live?",
+    safariQuizAnimals: '<img src="assets/images/cheetah.jpg">',
+    Answer1: "in the ocean",
+    Answer2: "at the zoo",
+    Answer3: "space",
+    Answer4: "in a house",
+    correctAnswer: "at the zoo",
+    Species:"cheetah",
+},
+{
+    safariQuestion: "What color is the below animal?",
+    safariQuizAnimals: '<img src="assets/images/crocodile.jpg">',
+    Answer1: "yellow",
+    Answer2: "purple",
+    Answer3: "brown",
+    Answer4: "green",
+    correctAnswer: "green",
+    Species:"crocodile",
+},
+{
+    safariQuestion: "How many legs does this animal have?",
+    safariQuizAnimals: '<img src="assets/images/fish.jpg">',
+    Answer1: "2 legs",
+    Answer2: "4 legs",
+    Answer3: "8 legs",
+    Answer4: "no legs",
+    correctAnswer: "no legs",
+    Species:"fish",
+},
+{
+    safariQuestion: "Does this animal lay eggs?",
+    safariQuizAnimals: '<img src="assets/images/frog.jpg">',
+    Answer1: "no",
+    Answer2: "only in summer",
+    Answer3: "no idea",
+    Answer4: "yes",
+    correctAnswer: "yes",
+    Species:"frog",
+},
+{
+    safariQuestion: "Is this animal fast or slow?",
+    safariQuizAnimals: '<img src="assets/images/tortoise.jpg">',
+    Answer1: "it is slow",
+    Answer2: "it is fast",
+    Answer3: "it can't move",
+    Answer4: "it is fast only when it is hungry",
+    correctAnswer: "it is slow",
+    Species:"tortoise",
+},
+{
+    safariQuestion: "How does this animal move?",
+    safariQuizAnimals: '<img src="assets/images/tiger.jpg">',
+    Answer1: " it walks",
+    Answer2: "it hops",
+    Answer3: "it swims",
+    Answer4: "it crawls",
+    correctAnswer: "it walks",
+    Species:"tiger",
+}
 ];
-
-
-
-function myCorrectAnswer(animal) {
-
-
-    for (let obtj of mySafariQuestions) {
-       if(obtj['Species']===animal){
-        return obtj['correctAnswer']
-       }
-        }
-}
-
-function myOptionsDisplay(x) {
-  //let x = Math.abs(6 - Math.floor(Math.random() * 10));
-    document.getElementById("answer-clue").innerHTML =
-    `<input type="radio" name="response" value="Answer1" id="Answer1">${mySafariQuestions[x]['Answer1']}
-    <input type="radio" name="response" value="Answer2" id="Answer2">${mySafariQuestions[x]['Answer2']}
-    <input type="radio" name="response" value="Answer3" id="Answer3">${mySafariQuestions[x]['Answer3']}
-    <input type="radio" name="response" value="Answer4" id="Answer4">${mySafariQuestions[x]['Answer4']}`
-
-//' document.getElementsByTagName('p')[0].innerText = mySafariQuestions[x]////['safariQuestion']
-  //  document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']'
-//console.log('executed')
-}
-
-function startGame() {
-    //console.log(gameType)
-    //gameOver();
-    let x = Math.abs(6 - Math.floor(Math.random() * 10));
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[x]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[x]['safariQuizAnimals']
-    myOptionsDisplay(x);
-    mylist.push(x);
-    console.log('we are playing the object number',mylist[0])
-}
-onload=startGame()
-
-function myUserAnswer() { 
-    
-     var radioCollection =document.getElementsByName('response');
-
-    for(i=0;i<radioCollection.length;i++){
-
-        if(radioCollection[i].checked){
-            console.log('user checked',radioCollection[i].value);
-            return radioCollection[i].value
-        }
-    }
-}
-
-let correctCounter = 0
-let wrongCounter = 0
-
-/**function showReview() {
-    document.querySelector(".gameover").style.opacity ="100%"
-    document.querySelector("playground").style.filter = "brightness(0.4)"
-}
-
-function gameOver() {
-
-    let i = myWrongIncrement();
-
-    for ( let i = 0; i = 3; i++) {
-        document.getElementById("hide-gameover").classList.add()
-    }
-    
-    
-    } */
-
-/** 
-function startGame(gameType) {
-   
-    //gameOver();
-  
-
-if(gameType==="bird"){
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[0]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[0]['safariQuizAnimals']
-    myOptionsDisplay(0);
-} else if (gameType==="cheetah") {
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[1]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[1]['safariQuizAnimals']
-    myOptionsDisplay(1);
-} else if (gameType === "crocodile") {
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[2]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[2]['safariQuizAnimals']
-    myOptionsDisplay(2);
-} else if (gameType === "fish") {
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[3]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[3]['safariQuizAnimals']
-    myOptionsDisplay(3);
-} else if (gameType === "frog") {
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[4]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[0]['safariQuizAnimals']
-    myOptionsDisplay(4);
-} else if (gameType === "tortoise") {
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[5]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[5]['safariQuizAnimals']
-    myOptionsDisplay(5);
-} else if (gameType === "tiger") {
-    document.getElementsByTagName('p')[0].innerText = mySafariQuestions[6]['safariQuestion']
-    document.getElementsByClassName("safari-quizAnimals")[0].innerHTML = mySafariQuestions[6]['safariQuizAnimals']
-    myOptionsDisplay(6);
-} else {
-    alert(`Unknown game type: ${gameType}`);
-    throw `Unknown game type: ${gameType}.Aborting!`;
-}
-}
-*/
-
-function myCorrectIncrement() {
-    
-    return ++correctCounter;
-}
-
-function myWrongIncrement() {
-    
-    return ++wrongCounter;
-
-}
-
-function myCheckAnswer(gt,uc) {
-   
-    let calculatedAnswer=myCorrectAnswer(gt)
-
-    if (gt===uc) {
-    alert("Well done, you know your animals!")
-    document.getElementById("correct").innerHTML=myCorrectIncrement()
-    } 
-    else {
-     alert(`Oops! You chose ${uc} which is not correct, the correct answer is ${calculatedAnswer}`)
-     document.getElementById("wrong").innerHTML=myWrongIncrement()
-    }
- //  console.log(calculatedAnswer[1])
-//startGame(calculatedAnswer[1]);
-
-}
-
-
